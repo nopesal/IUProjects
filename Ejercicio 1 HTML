@@ -1,0 +1,21 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <div>
+      <div class="cabecera">
+        <img class="logo" src="http://placehold.it/125x125">
+        <h1>
+          My first web page
+        </h1>
+      </div>
+      <nav>
+         <a href="/html/">Apps</a> |
+         <a href="/css/">Games</a> |
+         <a href="/js/">Movies</a> |
+         <a href="/jquery/">Books</a> |
+         <a href="/jquery/">Newspapers</a>
+      </nav>
+    </div>
+  </body>
+</html>
