@@ -22,3 +22,16 @@ h1 {
 nav a {
   padding-right: 10px;
 }
+
+#social-list {
+  list-style: none;
+}
+
+#social-list li {
+  display: inline;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+}
