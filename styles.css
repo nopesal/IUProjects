@@ -29,6 +29,12 @@ nav a {
 
 #social-list li {
   display: inline;
+  padding: 0 10px;
+  border-left: solid 1px black;
+}
+
+#social-list li:first-child{
+  border-left: none;
 }
 
 footer {
