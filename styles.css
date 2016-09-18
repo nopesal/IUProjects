@@ -29,13 +29,17 @@ nav a {
 
 #social-list li {
   display: inline;
-  padding: 0 10px;
-  border-left: solid 1px black;
 }
 
-#social-list li:first-child{
-  border-left: none;
+#social-list li:after {
+  content: " | ";
+  padding: 0 .5em;
 }
+
+#social-list li:last-child:after {
+    content: "";
+}
+
 
 footer {
   position: absolute;
