@@ -21,6 +21,9 @@ h1 {
 
 nav {
     background-color: #7CFFC4;
+    float: left;
+    width: 100%;
+    margin-bottom: 40px;
 }
 
 ul {
@@ -28,15 +31,22 @@ ul {
     margin: 0;
 }
 
+nav ul li {
+    list-style-type: none;
+    float: left;
+    width: 20%;
+    text-align: center;
+}
+
 nav a {
     text-align: center;
     text-decoration: none;
-    display: inline-block;
+    display: block;
     padding: 10px;
     color: black;
 }
 
-nav a:hover {
+nav li:hover {
     background-color: #6ABEA7;
 }
 
