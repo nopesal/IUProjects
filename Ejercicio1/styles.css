@@ -19,6 +19,11 @@ h1 {
     margin-bottom: 40px;
 }
 
+#logo {
+    height: 150px;
+    width: 150px;
+}
+
 nav {
     background-color: #7CFFC4;
     float: left;
@@ -86,6 +91,14 @@ fieldset {
 
 body {
     margin: 5%;
+}
+
+fieldset {
+    border-color: #6ABEA7;
+}
+
+body {
+    margin: 5%;
     font-family: 'Raleway', serif;
 }
 .fa {
@@ -104,16 +117,4 @@ body {
 
 @font-face {
     font-family: 'Raleway', sans-serif;
-}
-
-.fa-youtube-play {
-    color: #cc181e;
-}
-
-.fa-facebook-official {
-    color: #3b5998;
-}
-
-.fa-twitter {
-    color: #00aced;
 }
