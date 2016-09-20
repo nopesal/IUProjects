@@ -118,3 +118,15 @@ body {
 @font-face {
     font-family: 'Raleway', sans-serif;
 }
+
+.fa-youtube-play {
+    color: #cc181e;
+}
+
+.fa-facebook-official {
+    color: #3b5998;
+}
+
+.fa-twitter {
+    color: #00aced;
+}
