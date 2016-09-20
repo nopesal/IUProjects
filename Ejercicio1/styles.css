@@ -19,6 +19,11 @@ h1 {
     margin-bottom: 40px;
 }
 
+#logo {
+    height: 150px;
+    width: 150px;
+}
+
 nav {
     background-color: #7CFFC4;
     float: left;
