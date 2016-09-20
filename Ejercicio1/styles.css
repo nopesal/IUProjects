@@ -86,4 +86,34 @@ fieldset {
 
 body {
     margin: 5%;
+    font-family: 'Raleway', serif;
+}
+.fa {
+    margin: .25em
+}
+
+.social {
+    margin: auto;
+}
+
+.footer {
+    margin: auto;
+    width: 500px;
+    text-align: center;
+}
+
+@font-face {
+    font-family: 'Raleway', sans-serif;
+}
+
+.fa-youtube-play {
+    color: #cc181e;
+}
+
+.fa-facebook-official {
+    color: #3b5998;
+}
+
+.fa-twitter {
+    color: #00aced;
 }
