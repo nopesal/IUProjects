@@ -88,3 +88,6 @@ body {
     margin: 5%;
 }
 
+fieldset {
+    border-color: #6ABEA7;
+}
