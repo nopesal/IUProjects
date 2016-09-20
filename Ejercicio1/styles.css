@@ -91,16 +91,13 @@ fieldset {
 
 body {
     margin: 5%;
+    font-family: 'Raleway', serif;
 }
 
 fieldset {
     border-color: #6ABEA7;
 }
 
-body {
-    margin: 5%;
-    font-family: 'Raleway', serif;
-}
 .fa {
     margin: .25em
 }
