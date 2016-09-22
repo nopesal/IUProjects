@@ -1,0 +1,60 @@
+.titulo {
+    display: flex;
+    padding-left: 30%;
+    padding-right: 30%;
+}
+
+h1 {
+    margin-left: 40px;
+}
+
+body {
+    margin: 5%;
+}
+
+.user {
+    display: flex;
+    float: left;
+    width: 20%;
+}
+
+.user p {
+    margin-left: 20px;
+}
+
+nav {
+    float: right;
+    background-color: #7CFFC4;
+    width: 60%;
+    margin-bottom: 40px;
+    margin-top: 5px; /*Esto permite centrar el menú en el div padre verticalmente*/
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    list-style-type: none;
+    float: left;
+    width: 20%;
+    text-align: center;
+}
+
+nav a {
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    color: black;
+}
+
+nav li:hover {
+    background-color: #6ABEA7;
+}
+
+.menu {
+    height: 60px;
+    padding-top: 10px;
+}
