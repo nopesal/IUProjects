@@ -58,3 +58,95 @@ nav li:hover {
     height: 60px;
     padding-top: 10px;
 }
+
+.fa {
+    margin: .25em
+}
+
+.social {
+    margin: auto;
+}
+
+.footer {
+    border: solid;
+    border-color: red;
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    bottom:0;
+}
+
+.fa-youtube-play {
+    color: #cc181e;
+}
+
+.fa-facebook-official {
+    color: #3b5998;
+}
+
+.fa-twitter {
+    color: #00aced;
+}
+
+.footer-list {
+    list-style: none;
+}
+
+.footer-list li {
+    display: inline;
+}
+
+.footer-list li:after {
+    content: " | ";
+    padding: 0 .5em;
+}
+
+.footer-list li:last-child:after {
+    content: "";
+}
+
+.grid{
+    margin: 5px;
+}
+
+.grid-cell {
+    float:left;
+    width: 30%;
+    padding-bottom: 30%; /* = para aspecto 1:1 (cuadrado) */
+    margin:1.66%;
+    background-color: #1E1E1E;
+    overflow: hidden;
+    position: relative;
+}
+
+.content {
+    bottom:0;
+    border-color: #000;
+    background-color: white;
+    width: 88.5%;
+    border: solid;
+    position: absolute;
+    padding-left: 5%;
+    padding-right: 5%;
+    text-align: center;
+}
+
+.pic-title{
+    float: left;
+}
+
+.social-list {
+    float: right;
+    list-style: none;
+    position: absolute;
+    right: 0;
+    bottom: 25%;
+}
+
+.social-list li {
+    display: inline;
+}
+
+.social-list li:after {
+    padding: 0 .5em;
+}
