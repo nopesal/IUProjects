@@ -106,47 +106,52 @@ nav li:hover {
 }
 
 .grid{
-    margin: 5px;
-}
-
-.grid-cell {
-    float:left;
-    width: 30%;
-    padding-bottom: 30%; /* = para aspecto 1:1 (cuadrado) */
-    margin:1.66%;
-    background-color: #1E1E1E;
-    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom:  5%;
     position: relative;
 }
 
+.grid-cell {
+    flex: 0 0 32%;
+    height: 300px;
+    margin-bottom: 1%;
+    background-color: #999;
+    text-align: center;
+    width: 30%;
+}
+
 .content {
-    bottom:0;
     border-color: #000;
-    background-color: white;
+    background-color: transparent;
     width: 88.5%;
     border: solid;
-    position: absolute;
     padding-left: 5%;
     padding-right: 5%;
     text-align: center;
+    height: 18%;
 }
 
 .pic-title{
     float: left;
 }
 
-.social-list {
+.social-list{
     float: right;
-    list-style: none;
-    position: absolute;
-    right: 0;
-    bottom: 25%;
+    margin: 4%
 }
 
-.social-list li {
+.social-link{
     display: inline;
+    margin: 1%;
 }
 
-.social-list li:after {
-    padding: 0 .5em;
+.image-cell{
+    flex: auto;
+    margin-top: 6%;
+    margin-bottom: 3%;
+    max-width: 100%;
+    height: auto;
 }
