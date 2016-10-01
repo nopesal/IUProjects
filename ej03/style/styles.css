@@ -1,6 +1,7 @@
 aside {
     float: left;
     display: inline;
+    width: 500px;
 }
 
 h1 {
