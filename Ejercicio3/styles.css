@@ -207,15 +207,18 @@ nav li:hover {
     h1 {
         font-size: 1.4em;
         margin-left: 30px;
+        height: 80px;
+        line-height: 80px;
     }
 
     #logo {
         height: 80px;
         width: 80px;
-        margin-top: 10%;
     }
 
     .cabecera {
         margin-bottom: 2%;
+        height: 80px;
+        line-height: 80px;
     }
 }
