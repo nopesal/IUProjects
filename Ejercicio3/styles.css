@@ -203,6 +203,26 @@ nav li:hover {
     }
 }
 
+@media only screen and (max-width: 412px) {
+    h1 {
+        font-size: 1.6em;
+        margin-left: 30px;
+        height: 90px;
+        line-height: 90px;
+    }
+
+    #logo {
+        height: 90px;
+        width: 90px;
+    }
+
+    .cabecera {
+        margin-bottom: 2%;
+        height: 90px;
+        line-height: 90px;
+    }
+}
+
 @media only screen and (max-width: 320px) {
     h1 {
         font-size: 1.4em;
