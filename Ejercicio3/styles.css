@@ -25,6 +25,18 @@ h1 {
     margin-top: 5%;
 }
 
+.subsbox{
+    margin: 5%;
+    width: 80%;
+    display: inline-block;
+}
+label{
+    float: left;
+}
+
+.subform{
+    float: right;
+}
 #logo {
     height: 150px;
     width: 150px;
@@ -42,6 +54,7 @@ body {
 
 section {
     margin-left: 5%;
+    text-align: center;
 }
 
 .container {
