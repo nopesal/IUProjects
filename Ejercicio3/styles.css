@@ -3,9 +3,8 @@ aside {
     display: inline;
 }
 
-section {
-    float: left;
-    display: inline;
+.flex {
+    display: flex;
 }
 
 .cabecera {
@@ -31,13 +30,19 @@ body {
     background-color: #eeeeee;
 }
 
+section {
+    margin-left: 5%;
+}
+
+aside {
+    width: 200px;
+}
+
 .container {
-    max-width: 70%;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 80px;
-    background-color: rgba(106, 190, 167, 0.20);
-    border-color: #6ABEA7;
+    display: inline-block;
 }
 
 .container img {
@@ -69,8 +74,6 @@ ul {
 
 nav ul li {
     list-style-type: none;
-    float: left;
-    width: 20%;
     text-align: center;
 }
 
