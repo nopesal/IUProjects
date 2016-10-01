@@ -17,6 +17,10 @@ h1 {
     display: flex;
 }
 
+#popular {
+    width: 100%;
+}
+
 .cabecera {
     display: flex;
     height: 150px;
@@ -62,6 +66,7 @@ section {
     margin-right: auto;
     margin-bottom: 80px;
     display: inline-block;
+    text-align: left;
 }
 
 .container img {
