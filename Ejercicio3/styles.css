@@ -67,11 +67,7 @@ label {
 
     nav ul li {
         float: left;
-        width: 20%;
-    }
-
-    nav a {
-        padding: 10px !important;
+        width: 20% !important;
     }
 
     .columna {
@@ -151,14 +147,15 @@ ul {
 nav ul li {
     list-style-type: none;
     text-align: center;
+    width: 150px;
 }
 
 nav a {
     text-align: center;
     text-decoration: none;
     display: block;
-    padding: 10px 30px;
     color: black;
+    padding: 10px 5px;
 }
 
 nav a:hover {
