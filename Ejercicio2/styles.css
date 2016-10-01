@@ -79,6 +79,11 @@ nav li:hover {
     background-color: #6ABEA7;
 }
 
+nav a:hover {
+    color: white;
+    font-weight: bold;
+}
+
 .menu {
     height: 60px;
 }
