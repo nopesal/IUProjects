@@ -26,6 +26,7 @@ body {
     padding-left: 5%;
     padding-right: 5%;
     text-align: center;
+    background-color: #ecffee;
 }
 
 .user {
@@ -50,9 +51,8 @@ body {
 
 nav {
     float: right;
-    background-color: #7CFFC4;
     width: 60%;
-    margin-top: 5px; /*Esto permite centrar el menú en el div padre verticalmente*/
+    margin-top: 10px; /*Esto permite centrar el menú en el div padre verticalmente*/
 }
 
 ul {
@@ -81,8 +81,6 @@ nav li:hover {
 
 .menu {
     height: 60px;
-    padding-top: 10px;
-    margin-bottom: 40px;
 }
 
 .fa {
@@ -142,6 +140,7 @@ nav li:hover {
     width: 100%;
     max-width: 80%;
     margin: auto;
+    margin-top: 40px;
 }
 
 .grid-row {
@@ -157,7 +156,7 @@ nav li:hover {
 }
 
 .content {
-    background-color: #7CFFC4;
+    background-color: #b9fdbc;
     text-align: center;
     overflow: auto;
 }
