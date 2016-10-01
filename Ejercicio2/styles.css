@@ -1,7 +1,6 @@
 .titulo {
-    display: flex;
-    padding-left: 30%;
-    padding-right: 30%;
+    display: inline-flex;
+    margin-top: 5%;
 }
 
 #logo{
@@ -20,9 +19,13 @@ h1 {
 }
 
 body {
-    margin: 5%;
+    margin-right: auto;
+    margin-left: auto;
     font-family: 'Raleway', serif;
     max-width: 1200px;
+    padding-left: 5%;
+    padding-right: 5%;
+    text-align: center;
 }
 
 .user {
@@ -91,8 +94,7 @@ nav li:hover {
 }
 
 .footer {
-    text-align: center;
-    bottom:0;
+    margin-bottom: 5%;
 }
 
 .fa-youtube-play {
