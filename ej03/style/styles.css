@@ -167,6 +167,48 @@ nav li:hover {
     background-color: #6ABEA7;
 }
 
+.footer-list {
+    list-style: none;
+}
+
+.footer-list li {
+    display: inline;
+}
+
+.footer-list li:after {
+    content: " | ";
+    padding: 0 .5em;
+}
+
+.footer-list li:last-child:after {
+    content: "";
+}
+
+.fa {
+    margin: .25em
+}
+
+.social {
+    margin: auto;
+}
+
+.footer {
+    margin: auto;
+    text-align: center;
+}
+
+.fa-youtube-play {
+    color: #cc181e;
+}
+
+.fa-facebook-official {
+    color: #3b5998;
+}
+
+.fa-twitter {
+    color: #00aced;
+}
+
 @media only screen and (max-width: 600px) {
     aside {
         width: 100%;
@@ -223,6 +265,14 @@ nav li:hover {
     }
 }
 
+@media only screen and (max-width: 365px) {
+    .footer-list li {
+        font-size: small;
+    }
+
+
+}
+
 @media only screen and (max-width: 320px) {
     h1 {
         font-size: 1.4em;
@@ -241,4 +291,5 @@ nav li:hover {
         height: 80px;
         line-height: 80px;
     }
+
 }
