@@ -14,7 +14,8 @@ h1 {
 }
 
 body {
-    margin: 5%;
+    margin: auto;
+    max-width: 70%;
 }
 
 .user {
@@ -93,6 +94,18 @@ nav li:hover {
     color: #00aced;
 }
 
+.fa-star {
+    color: #ffff00;
+}
+
+.fa-comment {
+
+}
+
+.fa-share-alt{
+
+}
+
 .footer-list {
     list-style: none;
 }
@@ -123,24 +136,26 @@ nav li:hover {
     flex: 0 0 32%;
     height: 300px;
     margin-bottom: 1%;
-    background-color: #999;
+    background-color: red;
     text-align: center;
     width: 30%;
+    display: table;
 }
 
 .content {
     border-color: #000;
-    background-color: transparent;
+    background-color: lightgrey;
     width: 88.5%;
     border: solid;
     padding-left: 5%;
     padding-right: 5%;
     text-align: center;
-    height: 18%;
+    display: table-row;
 }
 
 .pic-title{
     float: left;
+    margin-left: 5%;
 }
 
 .social-list{
@@ -153,10 +168,7 @@ nav li:hover {
     margin: 1%;
 }
 
-.image-cell{
-    flex: auto;
-    margin-top: 6%;
-    margin-bottom: 3%;
-    max-width: 100%;
-    height: auto;
+img {
+    display: table-row;
+    height: 0;
 }
