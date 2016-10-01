@@ -4,7 +4,7 @@
     padding-right: 30%;
 }
 
-img {
+.grid img {
     width: 100%;
     height: auto;
 }
@@ -31,7 +31,6 @@ nav {
     float: right;
     background-color: #7CFFC4;
     width: 60%;
-    margin-bottom: 40px;
     margin-top: 5px; /*Esto permite centrar el menú en el div padre verticalmente*/
 }
 
@@ -62,6 +61,7 @@ nav li:hover {
 .menu {
     height: 60px;
     padding-top: 10px;
+    margin-bottom: 40px;
 }
 
 .fa {
