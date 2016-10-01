@@ -1,9 +1,25 @@
-.cabecera {
+body {
+    margin-right: auto;
+    margin-left: auto;
+    font-family: 'Raleway', serif;
+    max-width: 1200px;
+    padding-left: 5%;
+    padding-right: 5%;
+    background-color: #eeeeee;
+    margin-bottom: 5%;
+}
+
+.titulo {
     display: flex;
     height: 150px;
     line-height: 150px;
     margin-bottom: 30px;
     margin-top: 5%;
+}
+
+.cabecera {
+    margin-left: 40px;
+    margin-bottom: 40px;
 }
 
 h1 {
@@ -13,16 +29,6 @@ h1 {
     margin-bottom: 0;
     margin-left: 20px;
     font-size: 3em;
-}
-
-.columna a {
-    text-decoration: none;
-    color: black;
-}
-
-.section1 {
-    margin-left: 40px;
-    margin-bottom: 40px;
 }
 
 #logo {
@@ -66,31 +72,14 @@ nav li:hover {
     background-color: #6ABEA7;
 }
 
-.footer-list {
-    list-style: none;
-}
-
-.footer-list li {
-    display: inline;
-}
-
-.footer-list li:after {
-    content: " | ";
-    padding: 0 .5em;
-}
-
-.footer-list li:last-child:after {
-    content: "";
-}
-
 .columna {
     width: 30%;
     float: left;
 }
 
-fieldset img {
-    width: 100%;
-    height: auto;
+.columna a {
+    text-decoration: none;
+    color: black;
 }
 
 fieldset {
@@ -102,14 +91,9 @@ fieldset {
     border-color: #6ABEA7;
 }
 
-body {
-    margin-right: auto;
-    margin-left: auto;
-    font-family: 'Raleway', serif;
-    max-width: 1200px;
-    padding-left: 5%;
-    padding-right: 5%;
-    background-color: #eeeeee;
+fieldset img {
+    width: 100%;
+    height: auto;
 }
 
 legend {
@@ -127,16 +111,15 @@ legend {
 
 .footer {
     margin: auto;
-    width: 500px;
     text-align: center;
-}
-
-@font-face {
-    font-family: 'Raleway', sans-serif;
 }
 
 .fa-youtube-play {
     color: #cc181e;
+}
+
+@font-face {
+    font-family: 'Raleway', sans-serif;
 }
 
 .fa-facebook-official {
@@ -145,4 +128,21 @@ legend {
 
 .fa-twitter {
     color: #00aced;
+}
+
+.footer-list {
+    list-style: none;
+}
+
+.footer-list li {
+    display: inline;
+}
+
+.footer-list li:after {
+    content: " | ";
+    padding: 0 .5em;
+}
+
+.footer-list li:last-child:after {
+    content: "";
 }

@@ -21,7 +21,7 @@ h1 {
     width: 100%;
 }
 
-.cabecera {
+.titulo {
     display: flex;
     height: 150px;
     line-height: 150px;
@@ -197,7 +197,7 @@ nav li:hover {
         float: none;
     }
 
-    .cabecera {
+    .titulo {
         height: 100px;
         line-height: 100px;
     }
@@ -216,7 +216,7 @@ nav li:hover {
         width: 90px;
     }
 
-    .cabecera {
+    .titulo {
         margin-bottom: 2%;
         height: 90px;
         line-height: 90px;
@@ -236,7 +236,7 @@ nav li:hover {
         width: 80px;
     }
 
-    .cabecera {
+    .titulo {
         margin-bottom: 2%;
         height: 80px;
         line-height: 80px;
