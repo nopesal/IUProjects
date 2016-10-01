@@ -26,9 +26,9 @@ h1 {
 }
 
 .subsbox{
-    margin: 5%;
-    width: 80%;
+    width: 91%;
     display: inline-block;
+    margin: 2% 0 2% 0;
 }
 label{
     float: left;
