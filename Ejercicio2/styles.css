@@ -21,6 +21,7 @@ h1 {
 body {
     margin: 20px auto;
     max-width: 70%;
+    font-family: 'Raleway', serif;
 }
 
 .user {
@@ -105,15 +106,15 @@ nav li:hover {
 }
 
 .fa-star {
-    color: #ffff00;
+    color: grey;
 }
 
 .fa-comment {
-
+    color: grey;
 }
 
 .fa-share-alt{
-
+    color: grey;
 }
 
 .footer-list {
@@ -153,7 +154,7 @@ nav li:hover {
 
 .content {
     border-color: #000;
-    background-color: lightgrey;
+    background-color: #7CFFC4;
     width: 88.5%;
     border: solid;
     padding-left: 5%;
@@ -180,4 +181,9 @@ nav li:hover {
 img {
     display: table-row;
     height: 0;
+}
+
+
+@font-face {
+    font-family: 'Raleway', sans-serif;
 }
