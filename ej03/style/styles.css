@@ -42,53 +42,6 @@ label {
     float: right;
 }
 
-@media only screen and (max-width: 1100px) {
-    label {
-        float: none;
-        margin-bottom: 20px;
-    }
-
-    .subform {
-        float: none;
-        margin-top: 10px;
-    }
-}
-
-@media only screen and (min-width: 600px) and (max-width: 768px) {
-    .flex {
-        display: block;
-    }
-
-    aside {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    nav ul li {
-        float: left;
-        width: 20% !important;
-    }
-
-    .columna {
-        width: 100% !important;
-        margin-bottom: 5%;
-    }
-
-    .columna p {
-        font-size: 1.3em;
-    }
-
-    .container {
-        width: 100%;
-    }
-
-    h2 {
-        font-size: 2.3em;
-        margin-top: 10px;
-        margin-bottom: 0;
-    }
-}
-
 #logo {
     height: 150px;
     width: 150px;
@@ -206,6 +159,53 @@ nav li:hover {
 
 .fa-twitter {
     color: #00aced;
+}
+
+@media only screen and (max-width: 1100px) {
+    label {
+        float: none;
+        margin-bottom: 20px;
+    }
+
+    .subform {
+        float: none;
+        margin-top: 10px;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+    .flex {
+        display: block;
+    }
+
+    aside {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    nav ul li {
+        float: left;
+        width: 20% !important;
+    }
+
+    .columna {
+        width: 100% !important;
+        margin-bottom: 5%;
+    }
+
+    .columna p {
+        font-size: 1.3em;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    h2 {
+        font-size: 2.3em;
+        margin-top: 10px;
+        margin-bottom: 0;
+    }
 }
 
 @media only screen and (max-width: 600px) {
