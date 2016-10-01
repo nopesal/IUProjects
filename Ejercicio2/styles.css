@@ -19,9 +19,9 @@ h1 {
 }
 
 body {
-    margin: 20px auto;
-    max-width: 70%;
+    margin: 5% auto;
     font-family: 'Raleway', serif;
+    max-width: 1200px;
 }
 
 .user {
@@ -137,32 +137,25 @@ nav li:hover {
 }
 
 .grid{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
     width: 100%;
-    margin-bottom:  5%;
+    max-width: 80%;
+    margin: auto;
+}
+
+.grid-row {
+    display: flex;
+    margin-bottom: 5%;
 }
 
 .grid-cell {
-    flex: 0 0 32%;
-    height: 300px;
-    margin-bottom: 1%;
-    background-color: red;
-    text-align: center;
     width: 30%;
-    display: table;
+    float: right;
 }
 
 .content {
-    border-color: #000;
     background-color: #7CFFC4;
-    width: 88.5%;
-    border: solid;
-    padding-left: 5%;
-    padding-right: 5%;
     text-align: center;
-    display: table-row;
+    overflow: auto;
 }
 
 .pic-title{
@@ -173,11 +166,6 @@ nav li:hover {
 .social-list{
     float: right;
     margin: 4%
-}
-
-.social-link{
-    display: inline;
-    margin: 1%;
 }
 
 img {
