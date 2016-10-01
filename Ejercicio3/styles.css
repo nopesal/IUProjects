@@ -148,7 +148,6 @@ ul {
 nav ul li {
     list-style-type: none;
     text-align: center;
-    width: 150px;
 }
 
 nav a {
@@ -169,27 +168,38 @@ nav li:hover {
 }
 
 @media only screen and (max-width: 600px) {
-    aside{
+    aside {
         width: 100%;
         margin-bottom: 5%;
     }
-    h1{
-        font-size: 3em;
+
+    h1 {
+        font-size: 2em;
+        height: 100px;
+        line-height: 100px;
     }
-    .flex{
+
+    .flex {
         display: block;
     }
-    #logo{
-        height:100px;
-        width:100px;
-        margin-top: 4%;
+
+    #logo {
+        height: 100px;
+        width: 100px;
     }
-    section{
-        margin-left:0;
+
+    section {
+        margin-left: 0;
     }
-    .columna{
+
+    .columna {
         width: 100%;
         float: none;
+    }
+
+    .cabecera {
+        height: 100px;
+        line-height: 100px;
     }
 }
 
@@ -198,12 +208,14 @@ nav li:hover {
         font-size: 1.4em;
         margin-left: 30px;
     }
+
     #logo {
         height: 80px;
         width: 80px;
         margin-top: 10%;
     }
-    .cabecera{
-        margin-bottom:2%;
+
+    .cabecera {
+        margin-bottom: 2%;
     }
 }
