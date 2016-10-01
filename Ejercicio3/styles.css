@@ -51,8 +51,7 @@ body {
     margin-left: auto;
     font-family: 'Raleway', serif;
     max-width: 1200px;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 5%;    padding-right: 5%;
     background-color: #eeeeee;
 }
 
@@ -88,7 +87,6 @@ nav {
     background-color: #7CFFC4;
     float: left;
     width: 100%;
-    margin-bottom: 40px;
 }
 
 ul {
@@ -105,7 +103,7 @@ nav a {
     text-align: center;
     text-decoration: none;
     display: block;
-    padding: 10px;
+    padding: 10px 30px;
     color: black;
 }
 
