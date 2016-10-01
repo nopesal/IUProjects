@@ -1,6 +1,16 @@
 aside {
     float: left;
     display: inline;
+    width: 200px;
+}
+
+h1 {
+    height: 150px;
+    line-height: 150px;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 20px;
+    font-size: 3em;
 }
 
 .flex {
@@ -32,10 +42,6 @@ body {
 
 section {
     margin-left: 5%;
-}
-
-aside {
-    width: 200px;
 }
 
 .container {
