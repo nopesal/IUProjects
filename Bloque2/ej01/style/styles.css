@@ -57,7 +57,7 @@ h1 {
 
 nav {
     float: right;
-    width: 60%;
+    width: 30%;
     margin-top: 10px; /*Esto permite centrar el menú en el div padre verticalmente*/
 }
 
@@ -69,7 +69,7 @@ ul {
 nav ul li {
     list-style-type: none;
     float: left;
-    width: 20%;
+    width: 50%;
     text-align: center;
 }
 
