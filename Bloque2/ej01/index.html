@@ -29,7 +29,11 @@
 <div class="grid">
     <div class="grid-row">
         <div class="grid-cell" style="margin-right: 5%">
-            <a href=""><img src="images/14369204_689472331219838_975364581_n.jpg" alt="pic1"></a>
+            <div class="photo">
+                <a href=""><img src="images/14369204_689472331219838_975364581_n.jpg" alt="pic1"></a>
+                <div class="gradient"></div>
+                <p>Me encanta la foto! <span class="spacer"></span></p>
+            </div>
             <div class="content">
                 <div class="pic-title">
                     <p>Almond Cookie</p>
@@ -42,7 +46,11 @@
             </div>
         </div>
         <div class="grid-cell" style="margin-right: 5%">
-            <a href=""><img src="images/12070913_1629946617264714_746237316_n.jpg" alt="pic2"></a>
+            <div class="photo">
+                <a href=""><img src="images/12070913_1629946617264714_746237316_n.jpg" alt="pic2"></a>
+                <div class="gradient"></div>
+                <p><span class="spacer"></span></p>
+            </div>
             <div class="content">
                 <div class="pic-title">
                     <p>Breakfast For Two</p>
@@ -55,7 +63,11 @@
             </div>
         </div>
         <div class="grid-cell">
-            <a href=""><img src="images/12556145_1667886300117132_341009134_n.jpg" alt="pic3"></a>
+            <div class="photo">
+                <a href=""><img src="images/12556145_1667886300117132_341009134_n.jpg" alt="pic3"></a>
+                <div class="gradient"></div>
+                <p><span class="spacer"></span></p>
+            </div>
             <div class="content">
                 <div class="pic-title">
                     <p>Chocolate Muffin</p>
@@ -71,7 +83,11 @@
 
     <div class="grid-row">
         <div class="grid-cell" style="margin-right: 5%">
-            <a href=""><img src="images/13561674_1584680545159259_1998300102_n.jpg" alt="pic4"></a>
+            <div class="photo">
+                <a href=""><img src="images/13561674_1584680545159259_1998300102_n.jpg" alt="pic4"></a>
+                <div class="gradient"></div>
+                <p><span class="spacer"></span></p>
+            </div>
             <div class="content">
                 <div class="pic-title">
                     <p>Fruit To Go</p>
@@ -84,7 +100,11 @@
             </div>
         </div>
         <div class="grid-cell" style="margin-right: 5%">
-            <a href=""><img src="images/13712336_1603506346646327_2115627276_n.jpg" alt="pic5"></a>
+            <div class="photo">
+                <a href=""><img src="images/13712336_1603506346646327_2115627276_n.jpg" alt="pic5"></a>
+                <div class="gradient"></div>
+                <p><span class="spacer"></span></p>
+            </div>
             <div class="content">
                 <div class="pic-title">
                     <p>Layered Dessert</p>
@@ -97,7 +117,11 @@
             </div>
         </div>
         <div class="grid-cell">
-            <a href=""><img src="images/13744079_133994890372410_370468037_n.jpg" alt="pic6"></a>
+            <div class="photo">
+                <a href=""><img src="images/13744079_133994890372410_370468037_n.jpg" alt="pic6"></a>
+                <div class="gradient"></div>
+                <p><span class="spacer"></span></p>
+            </div>
             <div class="content">
                 <div class="pic-title">
                     <p>Cuisine du soleil</p>
@@ -113,7 +137,11 @@
 
     <div class="grid-row">
         <div class="grid-cell" style="margin-right: 5%">
-            <a href=""><img src="images/14295568_342910602715634_790979400_n.jpg" alt="pic7"></a>
+            <div class="photo">
+                <a href=""><img src="images/14295568_342910602715634_790979400_n.jpg" alt="pic7"></a>
+                <div class="gradient"></div>
+                <p><span class="spacer"></span></p>
+            </div>
             <div class="content">
                 <div class="pic-title">
                     <p>Salad To Go</p>
@@ -126,7 +154,11 @@
             </div>
         </div>
         <div class="grid-cell" style="margin-right: 5%">
-            <a href=""><img src="images/14334722_143569652763035_620291577_n.jpg" alt="pic8"></a>
+            <div class="photo">
+                <a href=""><img src="images/14334722_143569652763035_620291577_n.jpg" alt="pic8"></a>
+                <div class="gradient"></div>
+                <p><span class="spacer"></span></p>
+            </div>
             <div class="content">
                 <div class="pic-title">
                     <p>Fast Casual Lunch</p>
@@ -139,7 +171,11 @@
             </div>
         </div>
         <div class="grid-cell">
-            <a href=""><img src="images/14350592_1746015235659379_1057064444514795520_n.jpg" alt="pic9"></a>
+            <div class="photo">
+                <a href=""><img src="images/14350592_1746015235659379_1057064444514795520_n.jpg" alt="pic9"></a>
+                <div class="gradient"></div>
+                <p><span class="spacer"></span></p>
+            </div>
             <div class="content">
                 <div class="pic-title">
                     <p>Sun's out, eat out</p>
@@ -176,7 +212,7 @@
         likes[i].addEventListener('click', changeLikeColor, false);
     }
     function changeLikeColor() {
-        if(this.style.color == 'grey') {
+        if (this.style.color == 'grey') {
             this.style.color = 'red';
         } else {
             this.style.color = 'grey';
@@ -184,7 +220,7 @@
     }
 
     var shares = document.getElementsByClassName('fa-share-alt');
-    for (var i = 0; i < shares.length; i++) {
+    for (i = 0; i < shares.length; i++) {
         shares[i].addEventListener('click', shareAlert, false);
     }
 

@@ -118,6 +118,45 @@ img {
     height: 0;
 }
 
+.photo {
+    position: relative;
+}
+
+textarea {
+    background: transparent;
+    width: 95%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    color: white;
+    text-align: right;
+    border: none;
+    font-weight: bold;
+}
+
+.gradient {
+    background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.8), rgba(255, 255, 0, 0));
+    height: 35%;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+}
+
+.photo p {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    color: white;
+    text-align: right;
+    font-weight: bold;
+}
+
+.spacer {
+    padding: 0 5px;
+}
+
 .content {
     background-color: #b9fdbc;
     text-align: center;
