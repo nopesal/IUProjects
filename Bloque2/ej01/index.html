@@ -37,9 +37,9 @@
                     <p>Almond Cookie</p>
                 </div>
                 <div class="social-list">
-                    <i class="fa fa-star" onclick="changeBGColor()" aria-hidden="true"></i>
-                    <i class="fa fa-comment" aria-hidden="true"></i></a>
-                    <i class="fa fa-share-alt" aria-hidden="true"></i></a>
+                    <i class="fa fa-heart" aria-hidden="true"></i>
+                    <i class="fa fa-comment" aria-hidden="true"></i>
+                    <i class="fa fa-share-alt" aria-hidden="true"></i>
                 </div>
             </div>
         </div>
@@ -50,9 +50,9 @@
                     <p>Breakfast For Two</p>
                 </div>
                 <div class="social-list">
-                    <i class="fa fa-star" onclick="changeBGColor()" aria-hidden="true"></i></a>
-                    <i class="fa fa-comment" aria-hidden="true"></i></a>
-                    <i class="fa fa-share-alt" aria-hidden="true"></i></a>
+                    <i class="fa fa-heart" aria-hidden="true"></i>
+                    <i class="fa fa-comment" aria-hidden="true"></i>
+                    <i class="fa fa-share-alt" aria-hidden="true"></i>
                 </div>
             </div>
         </div>
@@ -63,9 +63,9 @@
                     <p>Chocolate Muffin</p>
                 </div>
                 <div class="social-list">
-                    <i class="fa fa-star" onclick="changeBGColor()" aria-hidden="true"></i></a>
-                    <i class="fa fa-comment" aria-hidden="true"></i></a>
-                    <i class="fa fa-share-alt" aria-hidden="true"></i></a>
+                    <i class="fa fa-heart" aria-hidden="true"></i>
+                    <i class="fa fa-comment" aria-hidden="true"></i>
+                    <i class="fa fa-share-alt" aria-hidden="true"></i>
                 </div>
             </div>
         </div>
@@ -79,9 +79,9 @@
                     <p>Fruit To Go</p>
                 </div>
                 <div class="social-list">
-                    <i class="fa fa-star" onclick="changeBGColor()" aria-hidden="true"></i></a>
-                    <i class="fa fa-comment" aria-hidden="true"></i></a>
-                    <i class="fa fa-share-alt" aria-hidden="true"></i></a>
+                    <i class="fa fa-heart" aria-hidden="true"></i>
+                    <i class="fa fa-comment" aria-hidden="true"></i>
+                    <i class="fa fa-share-alt" aria-hidden="true"></i>
                 </div>
             </div>
         </div>
@@ -92,9 +92,9 @@
                     <p>Layered Dessert</p>
                 </div>
                 <div class="social-list">
-                    <i class="fa fa-star" onclick="changeBGColor()" aria-hidden="true"></i></a>
-                    <i class="fa fa-comment" aria-hidden="true"></i></a>
-                    <i class="fa fa-share-alt" aria-hidden="true"></i></a>
+                    <i class="fa fa-heart" aria-hidden="true"></i>
+                    <i class="fa fa-comment" aria-hidden="true"></i>
+                    <i class="fa fa-share-alt" aria-hidden="true"></i>
                 </div>
             </div>
         </div>
@@ -105,9 +105,9 @@
                     <p>Cuisine du soleil</p>
                 </div>
                 <div class="social-list">
-                    <i class="fa fa-star" onclick="changeBGColor()" aria-hidden="true"></i></a>
-                    <i class="fa fa-comment" aria-hidden="true"></i></a>
-                    <i class="fa fa-share-alt" aria-hidden="true"></i></a>
+                    <i class="fa fa-heart" aria-hidden="true"></i>
+                    <i class="fa fa-comment" aria-hidden="true"></i>
+                    <i class="fa fa-share-alt" aria-hidden="true"></i>
                 </div>
             </div>
         </div>
@@ -121,9 +121,9 @@
                     <p>Salad To Go</p>
                 </div>
                 <div class="social-list">
-                    <i class="fa fa-star" onclick="changeBGColor()" aria-hidden="true"></i></a>
-                    <i class="fa fa-comment" aria-hidden="true"></i></a>
-                    <i class="fa fa-share-alt" aria-hidden="true"></i></a>
+                    <i class="fa fa-heart" aria-hidden="true"></i>
+                    <i class="fa fa-comment" aria-hidden="true"></i>
+                    <i class="fa fa-share-alt" aria-hidden="true"></i>
                 </div>
             </div>
         </div>
@@ -134,9 +134,9 @@
                     <p>Fast Casual Lunch</p>
                 </div>
                 <div class="social-list">
-                    <i class="fa fa-star" onclick="changeBGColor()" aria-hidden="true"></i></a>
-                    <i class="fa fa-comment" aria-hidden="true"></i></a>
-                    <i class="fa fa-share-alt" aria-hidden="true"></i></a>
+                    <i class="fa fa-heart" aria-hidden="true"></i>
+                    <i class="fa fa-comment" aria-hidden="true"></i>
+                    <i class="fa fa-share-alt" aria-hidden="true"></i>
                 </div>
             </div>
         </div>
@@ -147,9 +147,9 @@
                     <p>Sun's out, eat out</p>
                 </div>
                 <div class="social-list">
-                    <i class="fa fa-star" onclick="changeBGColor()" aria-hidden="true"></i></a>
-                    <i class="fa fa-comment" aria-hidden="true"></i></a>
-                    <i class="fa fa-share-alt" aria-hidden="true"></i></a>
+                    <i class="fa fa-heart" aria-hidden="true"></i>
+                    <i class="fa fa-comment" aria-hidden="true"></i>
+                    <i class="fa fa-share-alt" aria-hidden="true"></i>
                 </div>
             </div>
         </div>
@@ -172,18 +172,20 @@
     </div>
 </footer>
 <script>
-    function changeBGColor() {
-        var estrellas = document.getElementsByClassName('fa-star');
-        for(i=0; i<estrellas.length; i++) {
-            if(estrellas[i].onclick)
-            estrellas[i].style.color = 'red';
+
+    var likes = document.getElementsByClassName('fa-heart');
+    for (var i = 0; i < likes.length; i++) {
+        likes[i].addEventListener('click', changeLikeColor, false);
+    }
+    function changeLikeColor() {
+        if(this.style.color == 'grey') {
+            this.style.color = 'red';
+        } else {
+            this.style.color = 'grey';
         }
     }
-    window.onload = function () {
-        var estrellas = document.getElementsByClassName('fa-star').onclick = function() {
-            alert("hello")
-        };
-    };
+
+
 </script>
 </body>
 </html>
