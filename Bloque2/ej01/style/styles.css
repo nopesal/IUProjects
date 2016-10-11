@@ -1,0 +1,196 @@
+body {
+    margin-right: auto;
+    margin-left: auto;
+    font-family: 'Raleway', serif;
+    max-width: 1200px;
+    padding-left: 5%;
+    padding-right: 5%;
+    text-align: center;
+    background-color: #ecffee;
+}
+
+.titulo {
+    display: inline-flex;
+    margin-top: 5%;
+}
+
+#logo {
+    height: 100px;
+    width: 100px;
+}
+
+h1 {
+    margin-left: 40px;
+    margin-top: 30px;
+}
+
+.menu {
+    height: 60px;
+}
+
+.user {
+    float: left;
+    width: 20%;
+    display: flex;
+}
+
+#user-logo {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.user a {
+    margin: 0;
+    padding-left: 10px;
+    line-height: 60px;
+    text-decoration: none;
+    color: black;
+}
+
+.user a:hover {
+    font-weight: bold;
+    color: #6ABEA7;
+}
+
+nav {
+    float: right;
+    width: 60%;
+    margin-top: 10px; /*Esto permite centrar el menú en el div padre verticalmente*/
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    list-style-type: none;
+    float: left;
+    width: 20%;
+    text-align: center;
+}
+
+nav a {
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    color: black;
+}
+
+nav li:hover {
+    background-color: #6ABEA7;
+}
+
+nav a:hover {
+    color: white;
+    font-weight: bold;
+}
+
+.grid {
+    width: 100%;
+    max-width: 80%;
+    margin: 40px auto auto;
+}
+
+.grid-row {
+    display: flex;
+    margin-bottom: 5%;
+}
+
+.grid-cell {
+    flex: 0 0 32%;
+    margin-bottom: 1%;
+    width: 30%;
+    float: right;
+}
+
+.grid img {
+    width: 100%;
+    height: auto;
+}
+
+img {
+    display: table-row;
+    height: 0;
+}
+
+.content {
+    background-color: #b9fdbc;
+    text-align: center;
+    overflow: auto;
+}
+
+.pic-title {
+    float: left;
+    margin-left: 5%;
+}
+
+.footer {
+    margin-bottom: 5%;
+}
+
+.footer-list {
+    list-style: none;
+}
+
+.footer-list li {
+    display: inline;
+}
+
+.footer-list li:after {
+    content: " | ";
+    padding: 0 .5em;
+}
+
+.footer-list li:last-child:after {
+    content: "";
+}
+
+.social {
+    margin: auto;
+}
+
+.social-list {
+    float: right;
+    margin: 4%
+}
+
+.social-link {
+    display: inline;
+}
+
+.fa {
+    margin: .25em
+}
+
+.fa-youtube-play {
+    color: #cc181e;
+}
+
+.fa-facebook-official {
+    color: #3b5998;
+}
+
+.fa-twitter {
+    color: #00aced;
+}
+
+.fa-star {
+    color: grey;
+}
+
+.fa-comment {
+    color: grey;
+}
+
+.fa-share-alt {
+    color: grey;
+}
+
+@font-face {
+    font-family: 'Raleway', sans-serif;
+}
