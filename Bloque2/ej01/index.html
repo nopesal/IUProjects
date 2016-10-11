@@ -185,6 +185,15 @@
         }
     }
 
+    var shares = document.getElementsByClassName('fa-share-alt');
+    for (var i = 0; i < shares.length; i++) {
+        shares[i].addEventListener('click', shareAlert, false);
+    }
+
+    function shareAlert() {
+        alert('¡Ya se ha compartido la imagen!')
+    }
+
 
 </script>
 </body>
