@@ -18,9 +18,9 @@
 <form action="URL">
     <fieldset>
         <legend>Dirección de registro</legend>
-        <div>
-            <input name="name" type="text" placeholder="Nombre" required>
-            <input name="surname" type="text" placeholder="Apellidos" required>
+        <div id="nombre-apellidos">
+            <input class="entrada" name="name" type="text" placeholder="Nombre" style="margin-right: 1%" required>
+            <input class="entrada" name="surname" type="text" placeholder="Apellidos" required>
         </div>
         <div>
             <input id="mail1" pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"name="email" type="email" placeholder="Correo electrónico" required>
@@ -29,13 +29,13 @@
     </fieldset>
     <fieldset>
         <legend>Información de usuario</legend>
-        <input name="username" type="text" placeholder="Usuario" required><br>
+        <input class="entrada" name="username" type="text" placeholder="Usuario" required><br>
         <small>La contraseña sólo puede contener letras minúsculas y números.</small>
-        <input id="pass1" name="password" type="password" placeholder="Contraseña" maxlength="8"
+        <input class="entrada" id="pass1" name="password" type="password" placeholder="Contraseña" maxlength="8"
                pattern="(?=.*\d)(?=.*[a-z])(?=.*[0-9]).{,8}" title="Letras minúsculas y números" required>
-        <input id="pass2" onkeyup="passMatch()" name="confirmPassword" type="password" placeholder="Confirmar contraseña" maxlength="8"
+        <input class="entrada" id="pass2" onkeyup="passMatch()" name="confirmPassword" type="password" placeholder="Confirmar contraseña" maxlength="8"
                pattern="(?=.*\d)(?=.*[a-z])(?=.*[0-9]).{,8}" title="Letras minúsculas y números" required>
-        <div>
+        <div id="profile-picture">
             Foto de perfil:
             <input name="profilePicture" type="file" accept="image/*" formenctype="multipart/form-data"
                    formmethod="post"> <br>
@@ -45,34 +45,34 @@
     </fieldset>
     <fieldset>
         <legend>Información de intereses y hobbies</legend>
-        <input type="checkbox" name="intereses" value="1">Arte
-        <input type="checkbox" name="intereses" value="2">Coches
-        <input type="checkbox" name="intereses" value="3">Cocina
-        <input type="checkbox" name="intereses" value="4">Manualidades
-        <input type="checkbox" name="intereses" value="5">Citas
-        <input type="checkbox" name="intereses" value="6">Juego
-        <input type="checkbox" name="intereses" value="7">Música
-        <input type="checkbox" name="intereses" value="8">Animales
-        <input type="checkbox" name="intereses" value="9">Política
-        <input type="checkbox" name="intereses" value="10">Lectura
-        <input type="checkbox" name="intereses" value="11">Deporte
-        <input type="checkbox" name="intereses" value="12">Televisión
-        <input type="checkbox" name="intereses" value="13">Industria
-        <input type="checkbox" name="intereses" value="14">Tecnología
-        <input type="checkbox" name="intereses" value="1">Sorteos
-        <input type="checkbox" name="intereses" value="1">Antigüedad
-        <br>
-        <br>
+        <div id="intereses">
+            <input type="checkbox" name="intereses" value="1">Arte
+            <input type="checkbox" name="intereses" value="2">Coches
+            <input type="checkbox" name="intereses" value="3">Cocina
+            <input type="checkbox" name="intereses" value="4">Manualidades
+            <input type="checkbox" name="intereses" value="5">Citas
+            <input type="checkbox" name="intereses" value="6">Juego
+            <input type="checkbox" name="intereses" value="7">Música
+            <input type="checkbox" name="intereses" value="8">Animales
+            <input type="checkbox" name="intereses" value="9">Política
+            <input type="checkbox" name="intereses" value="10">Lectura
+            <input type="checkbox" name="intereses" value="11">Deporte
+            <input type="checkbox" name="intereses" value="12">Televisión
+            <input type="checkbox" name="intereses" value="13">Industria
+            <input type="checkbox" name="intereses" value="14">Tecnología
+            <input type="checkbox" name="intereses" value="1">Sorteos
+            <input type="checkbox" name="intereses" value="1">Antigüedad
+        </div>
         Eres aficionado a la fotografía?
-        <input name="fotografia" type="radio" value="0">No
+        <input name="fotografia" type="radio" value="0" checked>No
         <input name="fotografia" type="radio" value="1">Si
 
-        <div>
+        <div id="aficionado">
             <input name="estudio" type="text" placeholder="Estudio fotográfico">
             <input name="direccionEstudio" type="text" placeholder="Dirección del estudio">
             <input name="tel" type="tel" placeholder="Teléfono">
         </div>
-        <div>
+        <div id="submit">
             <input type="submit" value="Registrarse">
         </div>
     </fieldset>

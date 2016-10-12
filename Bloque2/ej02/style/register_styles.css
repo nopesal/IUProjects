@@ -25,7 +25,55 @@ h1 {
 }
 
 form {
-    max-width: 800px;
+    max-width: 700px;
     text-align: center;
     margin: auto;
+}
+
+.entrada {
+    width: 100%;
+    height: 25px;
+    background-color: transparent;
+    border: 1px solid #177b7c;
+    text-indent: 5px;
+    font-size: 0.9em;
+    margin-bottom: 1%;
+}
+
+.entrada::-webkit-input-placeholder {
+    color: #177b7c;
+}
+
+fieldset {
+    margin-bottom: 5%;
+    background-color: rgba(106, 190, 167, 0.51);
+}
+
+legend {
+    padding-bottom: 3%;
+}
+
+small {
+    font-size: 0.7em;
+}
+
+#nombre-apellidos {
+    display: flex;
+}
+
+#profile-picture {
+    margin-top: 3%;
+}
+
+#aficionado {
+    display: none;
+}
+
+#submit {
+    margin-top: 3%;
+}
+
+#intereses {
+    font-size: 0.9em;
+    margin-bottom: 3%;
 }
