@@ -124,7 +124,6 @@ img {
 
 .comment {
     position: absolute;
-    background-color: #6ABEA7;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -141,10 +140,14 @@ textarea {
 }
 
 .comment a {
+    background-color: #6ABEA7;
     width: 20%;
+    height: 100%;
     display: inline-block;
-    padding-top: 5%;
-    padding-bottom: 5%;
+}
+
+.comment a:hover {
+    background-color: #177b7c;
 }
 
 .gradient {
@@ -246,6 +249,7 @@ textarea {
 
 .fa-paper-plane {
     color: white;
+    padding-top: 25%;
 }
 
 @font-face {
