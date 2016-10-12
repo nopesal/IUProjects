@@ -279,7 +279,17 @@
     }
 
     function commentOff() {
-        this.parentNode.parentNode.style.display = 'none';
+        var comment = this.parentNode.parentNode;
+        var textarea = comment.firstElementChild;
+        var photo = comment.parentNode.previousElementSibling;
+        var p = photo.children[2];
+
+        var spacer = document.createElement('span');
+        spacer.className = 'spacer';
+
+        comment.style.display = 'none';
+        p.innerHTML = textarea.value;
+        p.appendChild(spacer);
     }
 
 
