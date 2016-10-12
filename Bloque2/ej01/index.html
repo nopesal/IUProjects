@@ -32,7 +32,7 @@
             <div class="photo">
                 <a href=""><img src="images/14369204_689472331219838_975364581_n.jpg" alt="pic1"></a>
                 <div class="gradient"></div>
-                <p>Me encanta la foto! <span class="spacer"></span></p>
+                <p>Me encanta la foto! </p>
             </div>
             <div class="content">
                 <div class="comment">
@@ -53,7 +53,7 @@
             <div class="photo">
                 <a href=""><img src="images/12070913_1629946617264714_746237316_n.jpg" alt="pic2"></a>
                 <div class="gradient"></div>
-                <p><span class="spacer"></span></p>
+                <p></p>
             </div>
             <div class="content">
                 <div class="comment">
@@ -74,7 +74,7 @@
             <div class="photo">
                 <a href=""><img src="images/12556145_1667886300117132_341009134_n.jpg" alt="pic3"></a>
                 <div class="gradient"></div>
-                <p><span class="spacer"></span></p>
+                <p></p>
             </div>
             <div class="content">
                 <div class="comment">
@@ -98,7 +98,7 @@
             <div class="photo">
                 <a href=""><img src="images/13561674_1584680545159259_1998300102_n.jpg" alt="pic4"></a>
                 <div class="gradient"></div>
-                <p><span class="spacer"></span></p>
+                <p></p>
             </div>
             <div class="content">
                 <div class="comment">
@@ -119,7 +119,7 @@
             <div class="photo">
                 <a href=""><img src="images/13712336_1603506346646327_2115627276_n.jpg" alt="pic5"></a>
                 <div class="gradient"></div>
-                <p><span class="spacer"></span></p>
+                <p></p>
             </div>
             <div class="content">
                 <div class="comment">
@@ -140,7 +140,7 @@
             <div class="photo">
                 <a href=""><img src="images/13744079_133994890372410_370468037_n.jpg" alt="pic6"></a>
                 <div class="gradient"></div>
-                <p><span class="spacer"></span></p>
+                <p></p>
             </div>
             <div class="content">
                 <div class="comment">
@@ -164,7 +164,7 @@
             <div class="photo">
                 <a href=""><img src="images/14295568_342910602715634_790979400_n.jpg" alt="pic7"></a>
                 <div class="gradient"></div>
-                <p><span class="spacer"></span></p>
+                <p></p>
             </div>
             <div class="content">
                 <div class="comment">
@@ -185,7 +185,7 @@
             <div class="photo">
                 <a href=""><img src="images/14334722_143569652763035_620291577_n.jpg" alt="pic8"></a>
                 <div class="gradient"></div>
-                <p><span class="spacer"></span></p>
+                <p></p>
             </div>
             <div class="content">
                 <div class="comment">
@@ -206,7 +206,7 @@
             <div class="photo">
                 <a href=""><img src="images/14350592_1746015235659379_1057064444514795520_n.jpg" alt="pic9"></a>
                 <div class="gradient"></div>
-                <p><span class="spacer"></span></p>
+                <p></p>
             </div>
             <div class="content">
                 <div class="comment">
@@ -242,13 +242,12 @@
     </div>
 </footer>
 <script>
-
     var likes = document.getElementsByClassName('fa-heart');
     for (var i = 0; i < likes.length; i++) {
         likes[i].addEventListener('click', changeLikeColor, false);
     }
     function changeLikeColor() {
-        if(this.style.color == 'red'){
+        if (this.style.color == 'red') {
             this.style.color = 'grey';
         } else {
             this.style.color = 'red';
@@ -265,7 +264,7 @@
     }
 
     var comments = document.getElementsByClassName('fa-comment');
-    for (i = 0; i<comments.length; i++) {
+    for (i = 0; i < comments.length; i++) {
         comments[i].addEventListener('click', commentOn, false);
     }
 
@@ -284,14 +283,25 @@
         var photo = comment.parentNode.previousElementSibling;
         var p = photo.children[2];
 
-        var spacer = document.createElement('span');
-        spacer.className = 'spacer';
-
         comment.style.display = 'none';
         p.innerHTML = textarea.value;
-        p.appendChild(spacer);
     }
 
+    var gridCell = document.getElementsByClassName('grid-cell');
+    for (i = 0; i < gridCell.length; i++) {
+        gridCell[i].addEventListener('mouseover', showText, false);
+        gridCell[i].addEventListener('mouseout', hideText, false);
+    }
+
+    function showText() {
+        this.firstElementChild.children[1].style.display = 'block';
+        this.firstElementChild.children[2].style.display = 'block';
+    }
+
+    function hideText() {
+        this.firstElementChild.children[1].style.display = 'none';
+        this.firstElementChild.children[2].style.display = 'none';
+    }
 
 </script>
 </body>

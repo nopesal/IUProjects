@@ -158,16 +158,19 @@ textarea {
     bottom: 0;
     left: 0;
     position: absolute;
+    display: none;
 }
 
 .photo p {
     position: absolute;
-    width: 100%;
+    width: 94%;
     left: 0;
     bottom: 0;
     color: white;
     text-align: right;
     font-weight: bold;
+    padding-left: 3%;
+    display: none;
 }
 
 .spacer {
