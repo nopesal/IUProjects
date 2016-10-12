@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro</title>
+    <link rel="stylesheet" href="style/register_styles.css" media="screen" title="no title">
+    <link rel="stylesheet" href="images/font-awesome/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+</head>
+<body>
+<div class="titulo">
+    <img id="logo" src="images/logo.png" alt="logo">
+    <h1>I Like It!</h1>
+</div>
+<hr>
+<h2>Regístrate para poder compartir las fotos de tus mejores platos</h2>
+<h3>Completa el siguiente formulario con tus datos</h3>
+<form action="URL">
+    <fieldset>
+        <legend>Dirección de registro</legend>
+        <div>
+            <input name="name" type="text" placeholder="Nombre" required>
+            <input name="surname" type="text" placeholder="Apellidos" required>
+        </div>
+        <div>
+            <input name="email" type="email" placeholder="Correo electrónico" required>
+            <input name="confirmEmail" type="email" placeholder="Confirmación de correo electrónico" required>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>Información de usuario</legend>
+        <input name="username" type="text" placeholder="Usuario" required><br>
+        <small>La contraseña sólo puede contener letras minúsculas y números.</small>
+        <input name="password" type="password" placeholder="Contraseña" maxlength="8"
+               pattern="[0-9]|[a-z]" title="Letras minúculas y números" required>
+        <input name="confirmPassword" type="password" placeholder="Confirmar contraseña" maxlength="8"
+               pattern="[0-9]|[a-z]" title="Letras minúculas y números" required>
+        <div>
+            Foto de perfil:
+            <input name="profilePicture" type="file" accept="image/*" formenctype="multipart/form-data"
+                   formmethod="post"> <br>
+            <small>La foto de perfil podrá ser cambiada en cualquier momento desde el apartado Opciones de la cuenta.
+            </small>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>Información de intereses y hobbies</legend>
+        <input type="checkbox" name="intereses" value="1">Arte
+        <input type="checkbox" name="intereses" value="2">Coches
+        <input type="checkbox" name="intereses" value="3">Cocina
+        <input type="checkbox" name="intereses" value="4">Manualidades
+        <input type="checkbox" name="intereses" value="5">Citas
+        <input type="checkbox" name="intereses" value="6">Juego
+        <input type="checkbox" name="intereses" value="7">Música
+        <input type="checkbox" name="intereses" value="8">Animales
+        <input type="checkbox" name="intereses" value="9">Política
+        <input type="checkbox" name="intereses" value="10">Lectura
+        <input type="checkbox" name="intereses" value="11">Deporte
+        <input type="checkbox" name="intereses" value="12">Televisión
+        <input type="checkbox" name="intereses" value="13">Industria
+        <input type="checkbox" name="intereses" value="14">Tecnología
+        <input type="checkbox" name="intereses" value="1">Sorteos
+        <input type="checkbox" name="intereses" value="1">Antigüedad
+        <br>
+        <br>
+        Eres aficionado a la fotografía?
+        <input name="fotografia" type="radio" value="0">No
+        <input name="fotografia" type="radio" value="1">Si
+
+        <div>
+            <input name="estudio" type="text" placeholder="Estudio fotográfico">
+            <input name="direccionEstudio" type="text" placeholder="Dirección del estudio">
+            <input name="tel" type="tel" placeholder="Teléfono">
+        </div>
+        <div>
+            <input type="submit" value="Registrarse">
+        </div>
+    </fieldset>
+</form>
+</body>
+</html>
