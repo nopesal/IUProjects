@@ -23,18 +23,18 @@
             <input class="entrada" name="surname" type="text" placeholder="Apellidos" required>
         </div>
         <div>
-            <input id="mail1" pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"name="email" type="email" placeholder="Correo electrónico" required>
-            <input id="mail2" pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?" name="confirmEmail" onkeyup="mailMatch()" type="email" placeholder="Confirmación de correo electrónico" required>
+            <input class="entrada" id="mail1" pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"name="email" type="email" placeholder="Correo electrónico" required>
+            <input class="entrada" id="mail2" pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?" name="confirmEmail" onkeyup="mailMatch()" type="email" placeholder="Confirmación de correo electrónico" required>
         </div>
     </fieldset>
     <fieldset>
         <legend>Información de usuario</legend>
         <input class="entrada" name="username" type="text" placeholder="Usuario" required><br>
-        <small>La contraseña sólo puede contener letras minúsculas y números.</small>
         <input class="entrada" id="pass1" name="password" type="password" placeholder="Contraseña" maxlength="8"
                pattern="(?=.*\d)(?=.*[a-z])(?=.*[0-9]).{,8}" title="Letras minúsculas y números" required>
         <input class="entrada" id="pass2" onkeyup="passMatch()" name="confirmPassword" type="password" placeholder="Confirmar contraseña" maxlength="8"
                pattern="(?=.*\d)(?=.*[a-z])(?=.*[0-9]).{,8}" title="Letras minúsculas y números" required>
+        <small>La contraseña sólo puede contener letras minúsculas y números.</small>
         <div id="profile-picture">
             Foto de perfil:
             <input name="profilePicture" type="file" accept="image/*" formenctype="multipart/form-data"
