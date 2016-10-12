@@ -32,7 +32,7 @@
             <div class="photo">
                 <a href=""><img src="images/14369204_689472331219838_975364581_n.jpg" alt="pic1"></a>
                 <div class="gradient"></div>
-                <p>Me encanta la foto! </p>
+                <p></p>
             </div>
             <div class="content">
                 <div class="comment">
@@ -301,8 +301,6 @@
     }
 
     function showMore(mensaje, j, mases) {
-        console.log(mensaje);
-        console.log(j);
         mases[j-1].parentNode.insertAdjacentHTML('beforeend', mensaje);
         mases[j-1].remove();
     }
