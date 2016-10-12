@@ -18,22 +18,31 @@
 <form action="URL">
     <fieldset>
         <legend>Dirección de registro</legend>
-        <div id="nombre-apellidos">
+        <div class="flex">
             <input class="entrada" name="name" type="text" placeholder="Nombre" style="margin-right: 1%" required>
             <input class="entrada" name="surname" type="text" placeholder="Apellidos" required>
         </div>
         <div>
-            <input class="entrada" id="mail1" pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"name="email" onkeyup="mailMatch()" type="email" placeholder="Correo electrónico" required>
-            <input class="entrada" id="mail2" pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?" name="confirmEmail" onkeyup="mailMatch()" type="email" placeholder="Confirmación de correo electrónico" required>
+            <input class="entrada" id="mail1"
+                   pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"
+                   name="email" onkeyup="mailMatch()" type="email" placeholder="Correo electrónico" required>
+            <input class="entrada" id="mail2"
+                   pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"
+                   name="confirmEmail" onkeyup="mailMatch()" type="email"
+                   placeholder="Confirmación de correo electrónico" required>
         </div>
     </fieldset>
     <fieldset>
         <legend>Información de usuario</legend>
         <input class="entrada" name="username" type="text" placeholder="Usuario" required><br>
-        <input class="entrada" id="pass1" onkeyup="passMatch()" name="password" type="password" placeholder="Contraseña" maxlength="8"
-               pattern="(?=.*\d)(?=.*[a-z])(?=.*[0-9]).{,8}" title="Letras minúsculas y números" required>
-        <input class="entrada" id="pass2" onkeyup="passMatch()" name="confirmPassword" type="password" placeholder="Confirmar contraseña" maxlength="8"
-               pattern="(?=.*\d)(?=.*[a-z])(?=.*[0-9]).{,8}" title="Letras minúsculas y números" required>
+        <div class="flex">
+            <input class="entrada" id="pass1" onkeyup="passMatch()" name="password" type="password"
+                   placeholder="Contraseña" maxlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[0-9]).{,8}"
+                   title="Letras minúsculas y números" style="margin-right: 1%" required>
+            <input class="entrada" id="pass2" onkeyup="passMatch()" name="confirmPassword" type="password"
+                   placeholder="Confirmar contraseña" maxlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[0-9]).{,8}"
+                   title="Letras minúsculas y números" required>
+        </div>
         <small>La contraseña sólo puede contener letras minúsculas y números.</small>
         <div id="profile-picture">
             Foto de perfil:
@@ -81,7 +90,7 @@
     function passMatch() {
         var pass1 = document.getElementById('pass1').value;
         var pass2 = document.getElementById('pass2').value;
-        if(pass1 != pass2){
+        if (pass1 != pass2) {
             //document.getElementById("pass1").style.backgroundColor = "#ff6666";
             document.getElementById("pass2").style.backgroundColor = "#ff6666";
         } else {
@@ -94,7 +103,7 @@
     function mailMatch() {
         var mail1 = document.getElementById("mail1").value;
         var mail2 = document.getElementById("mail2").value;
-        if(mail1 != mail2) {
+        if (mail1 != mail2) {
             document.getElementById("mail2").style.backgroundColor = "#ff6666";
         } else {
             document.getElementById("mail2").style.backgroundColor = "#66cc66";

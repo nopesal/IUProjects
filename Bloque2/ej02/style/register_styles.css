@@ -50,14 +50,14 @@ fieldset {
 }
 
 legend {
-    padding-bottom: 3%;
+    padding-bottom: 20px;
 }
 
 small {
     font-size: 0.7em;
 }
 
-#nombre-apellidos {
+.flex {
     display: flex;
 }
 
