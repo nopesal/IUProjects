@@ -216,10 +216,10 @@
         likes[i].addEventListener('click', changeLikeColor, false);
     }
     function changeLikeColor() {
-        if (this.style.color == 'grey') {
-            this.style.color = 'red';
-        } else {
+        if(this.style.color == 'red'){
             this.style.color = 'grey';
+        } else {
+            this.style.color = 'red';
         }
     }
 
