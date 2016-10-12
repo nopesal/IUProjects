@@ -73,9 +73,9 @@
             <input type="checkbox" name="intereses" value="1">Sorteos
             <input type="checkbox" name="intereses" value="1">Antigüedad
         </div>
-        Eres aficionado a la fotografía?
-        <input name="fotografia" type="radio" value="0" checked>No
-        <input name="fotografia" type="radio" value="1">Si
+        ¿Eres aficionado a la fotografía?
+        <input name="fotografia" onclick="toggleAficionadoOff()" type="radio" value="0" checked>No
+        <input name="fotografia" onclick="toggleAficionadoOn()" type="radio" value="1">Si
 
         <div id="aficionado">
             <input name="estudio" type="text" placeholder="Estudio fotográfico">
@@ -88,6 +88,20 @@
     </fieldset>
 </form>
 <script>
+
+    var radios = document.getElementsByName('fotografia');
+    for (var i = 0; i < radios.length; i++) {
+        radios[i].addEventListener('click', toggleAficionado, false);
+    }
+
+    function toggleAficionado() {
+        if(this.value == 1){
+            document.getElementById("aficionado").style.display = "inline";
+        } else {
+            document.getElementById("aficionado").style.display = "none";
+        }
+    }
+
     function passMatch() {
         var pass1 = document.getElementById('pass1').value;
         var pass2 = document.getElementById('pass2').value;
