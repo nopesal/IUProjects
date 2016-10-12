@@ -23,18 +23,18 @@
             <input name="surname" type="text" placeholder="Apellidos" required>
         </div>
         <div>
-            <input name="email" type="email" placeholder="Correo electrónico" required>
-            <input name="confirmEmail" type="email" placeholder="Confirmación de correo electrónico" required>
+            <input id="mail1" pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"name="email" type="email" placeholder="Correo electrónico" required>
+            <input id="mail2" pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?" name="confirmEmail" onkeyup="mailMatch()" type="email" placeholder="Confirmación de correo electrónico" required>
         </div>
     </fieldset>
     <fieldset>
         <legend>Información de usuario</legend>
         <input name="username" type="text" placeholder="Usuario" required><br>
         <small>La contraseña sólo puede contener letras minúsculas y números.</small>
-        <input name="password" type="password" placeholder="Contraseña" maxlength="8"
-               pattern="[0-9]|[a-z]" title="Letras minúculas y números" required>
-        <input name="confirmPassword" type="password" placeholder="Confirmar contraseña" maxlength="8"
-               pattern="[0-9]|[a-z]" title="Letras minúculas y números" required>
+        <input id="pass1" name="password" type="password" placeholder="Contraseña" maxlength="8"
+               pattern="(?=.*\d)(?=.*[a-z])(?=.*[0-9]).{,8}" title="Letras minúsculas y números" required>
+        <input id="pass2" onkeyup="passMatch()" name="confirmPassword" type="password" placeholder="Confirmar contraseña" maxlength="8"
+               pattern="(?=.*\d)(?=.*[a-z])(?=.*[0-9]).{,8}" title="Letras minúsculas y números" required>
         <div>
             Foto de perfil:
             <input name="profilePicture" type="file" accept="image/*" formenctype="multipart/form-data"
@@ -77,5 +77,29 @@
         </div>
     </fieldset>
 </form>
+<script>
+    function passMatch() {
+        var pass1 = document.getElementById('pass1').value;
+        var pass2 = document.getElementById('pass2').value;
+        if(pass1 != pass2){
+            //document.getElementById("pass1").style.backgroundColor = "#ff6666";
+            document.getElementById("pass2").style.backgroundColor = "#ff6666";
+        } else {
+            //document.getElementById("pass1").style.backgroundColor = "#66cc66";
+            document.getElementById("pass2").style.backgroundColor = "#66cc66";
+        }
+
+    }
+
+    function mailMatch() {
+        var mail1 = document.getElementById("mail1").value;
+        var mail2 = document.getElementById("mail2").value;
+        if(mail1 != mail2) {
+            document.getElementById("mail2").style.backgroundColor = "#ff6666";
+        } else {
+            document.getElementById("mail2").style.backgroundColor = "#66cc66";
+        }
+    }
+</script>
 </body>
 </html>
