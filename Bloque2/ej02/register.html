@@ -46,8 +46,9 @@
         <small>La contraseña sólo puede contener letras minúsculas y números.</small>
         <div id="profile-picture">
             Foto de perfil:
-            <input name="profilePicture" type="file" accept="image/*" formenctype="multipart/form-data"
+            <input id="files" name="profilePicture" type="file" accept="image/*" formenctype="multipart/form-data"
                    formmethod="post"> <br>
+            <img id="preview">
             <small>La foto de perfil podrá ser cambiada en cualquier momento desde el apartado Opciones de la cuenta.
             </small>
         </div>
@@ -109,6 +110,16 @@
             document.getElementById("mail2").style.backgroundColor = "#66cc66";
         }
     }
+
+    document.getElementById("files").onchange = function () {
+        var reader = new FileReader();
+        reader.onload = function (e) {
+            document.getElementById("preview").src = e.target.result;
+            document.getElementById("preview").style.display = "block";
+        };
+        reader.readAsDataURL(this.files[0]);
+    };
+
 </script>
 </body>
 </html>
