@@ -78,9 +78,9 @@
         <input name="fotografia" onclick="toggleAficionadoOn()" type="radio" value="1">Si
 
         <div id="aficionado">
-            <input name="estudio" type="text" placeholder="Estudio fotográfico">
-            <input name="direccionEstudio" type="text" placeholder="Dirección del estudio">
-            <input name="tel" type="tel" placeholder="Teléfono">
+            <input class="entrada" name="estudio" type="text" placeholder="Estudio fotográfico">
+            <input class="entrada" name="direccionEstudio" type="text" placeholder="Dirección del estudio">
+            <input class="entrada" name="tel" type="tel" placeholder="Teléfono">
         </div>
         <div id="submit">
             <input type="submit" value="Registrarse">
@@ -96,7 +96,8 @@
 
     function toggleAficionado() {
         if(this.value == 1){
-            document.getElementById("aficionado").style.display = "inline";
+            document.getElementById("aficionado").style.display = "block";
+            window.scrollTo(0, document.body.scrollHeight);
         } else {
             document.getElementById("aficionado").style.display = "none";
         }
