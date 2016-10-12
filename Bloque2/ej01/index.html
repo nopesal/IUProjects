@@ -282,9 +282,29 @@
         var textarea = comment.firstElementChild;
         var photo = comment.parentNode.previousElementSibling;
         var p = photo.children[2];
-
         comment.style.display = 'none';
-        p.innerHTML = textarea.value;
+
+        if(textarea.value.length>30){
+            p.innerHTML = textarea.value.substring(0, 30);
+            var hiddenText = textarea.value.substr(30, textarea.value.length);
+            p.insertAdjacentHTML('beforeend', '<i class="fa fa-plus" aria-hidden="true">');
+            var pluses = document.getElementsByClassName('fa-plus');
+            for (i = 0; i < pluses.length; i++) {
+                pluses[i].addEventListener('click', function () {
+                    showMore(hiddenText, i, pluses);
+                }, false);
+            }
+        } else {
+            p.innerHTML = textarea.value;
+        }
+
+    }
+
+    function showMore(mensaje, j, mases) {
+        console.log(mensaje);
+        console.log(j);
+        mases[j-1].parentNode.insertAdjacentHTML('beforeend', mensaje);
+        mases[j-1].remove();
     }
 
     var gridCell = document.getElementsByClassName('grid-cell');
