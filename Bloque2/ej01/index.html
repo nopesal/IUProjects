@@ -37,7 +37,7 @@
             <div class="content">
                 <div class="comment">
                     <textarea maxlength="100" placeholder="Escribe tu comentario..."></textarea>
-                    <a href=""><i class="fa fa-paper-plane" aria-hidden="true"></i></a>
+                    <a><i class="fa fa-paper-plane" aria-hidden="true"></i></a>
                 </div>
                 <div class="pic-title">
                     <p>Almond Cookie</p>
@@ -58,7 +58,7 @@
             <div class="content">
                 <div class="comment">
                     <textarea maxlength="100" placeholder="Escribe tu comentario..."></textarea>
-                    <a href=""><i class="fa fa-paper-plane" aria-hidden="true"></i></a>
+                    <a><i class="fa fa-paper-plane" aria-hidden="true"></i></a>
                 </div>
                 <div class="pic-title">
                     <p>Breakfast For Two</p>
@@ -79,7 +79,7 @@
             <div class="content">
                 <div class="comment">
                     <textarea maxlength="100" placeholder="Escribe tu comentario..."></textarea>
-                    <a href=""><i class="fa fa-paper-plane" aria-hidden="true"></i></a>
+                    <a><i class="fa fa-paper-plane" aria-hidden="true"></i></a>
                 </div>
                 <div class="pic-title">
                     <p>Chocolate Muffin</p>
@@ -103,7 +103,7 @@
             <div class="content">
                 <div class="comment">
                     <textarea maxlength="100" placeholder="Escribe tu comentario..."></textarea>
-                    <a href=""><i class="fa fa-paper-plane" aria-hidden="true"></i></a>
+                    <a><i class="fa fa-paper-plane" aria-hidden="true"></i></a>
                 </div>
                 <div class="pic-title">
                     <p>Fruit To Go</p>
@@ -124,7 +124,7 @@
             <div class="content">
                 <div class="comment">
                     <textarea maxlength="100" placeholder="Escribe tu comentario..."></textarea>
-                    <a href=""><i class="fa fa-paper-plane" aria-hidden="true"></i></a>
+                    <a><i class="fa fa-paper-plane" aria-hidden="true"></i></a>
                 </div>
                 <div class="pic-title">
                     <p>Layered Dessert</p>
@@ -145,7 +145,7 @@
             <div class="content">
                 <div class="comment">
                     <textarea maxlength="100" placeholder="Escribe tu comentario..."></textarea>
-                    <a href=""><i class="fa fa-paper-plane" aria-hidden="true"></i></a>
+                    <a><i class="fa fa-paper-plane" aria-hidden="true"></i></a>
                 </div>
                 <div class="pic-title">
                     <p>Cuisine du soleil</p>
@@ -169,7 +169,7 @@
             <div class="content">
                 <div class="comment">
                     <textarea maxlength="100" placeholder="Escribe tu comentario..."></textarea>
-                    <a href=""><i class="fa fa-paper-plane" aria-hidden="true"></i></a>
+                    <a><i class="fa fa-paper-plane" aria-hidden="true"></i></a>
                 </div>
                 <div class="pic-title">
                     <p>Salad To Go</p>
@@ -190,7 +190,7 @@
             <div class="content">
                 <div class="comment">
                     <textarea maxlength="100" placeholder="Escribe tu comentario..."></textarea>
-                    <a href=""><i class="fa fa-paper-plane" aria-hidden="true"></i></a>
+                    <a><i class="fa fa-paper-plane" aria-hidden="true"></i></a>
                 </div>
                 <div class="pic-title">
                     <p>Fast Casual Lunch</p>
@@ -211,7 +211,7 @@
             <div class="content">
                 <div class="comment">
                     <textarea maxlength="100" placeholder="Escribe tu comentario..."></textarea>
-                    <a href=""><i class="fa fa-paper-plane" aria-hidden="true"></i></a>
+                    <a><i class="fa fa-paper-plane" aria-hidden="true"></i></a>
                 </div>
                 <div class="pic-title">
                     <p>Sun's out, eat out</p>
@@ -262,6 +262,24 @@
 
     function shareAlert() {
         alert('¡Ya se ha compartido la imagen!')
+    }
+
+    var comments = document.getElementsByClassName('fa-comment');
+    for (i = 0; i<comments.length; i++) {
+        comments[i].addEventListener('click', commentOn, false);
+    }
+
+    function commentOn() {
+        this.parentNode.parentNode.firstElementChild.style.display = 'inline';
+    }
+
+    var paperplanes = document.getElementsByClassName('fa-paper-plane');
+    for (i = 0; i < paperplanes.length; i++) {
+        paperplanes[i].addEventListener('click', commentOff, false);
+    }
+
+    function commentOff() {
+        this.parentNode.parentNode.style.display = 'none';
     }
 
 
