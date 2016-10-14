@@ -70,8 +70,8 @@
             <input type="checkbox" name="intereses" value="12">Televisión
             <input type="checkbox" name="intereses" value="13">Industria
             <input type="checkbox" name="intereses" value="14">Tecnología
-            <input type="checkbox" name="intereses" value="1">Sorteos
-            <input type="checkbox" name="intereses" value="1">Antigüedad
+            <input type="checkbox" name="intereses" value="15">Sorteos
+            <input type="checkbox" name="intereses" value="16">Antigüedad
         </div>
         ¿Eres aficionado a la fotografía?
         <input name="fotografia" onclick="toggleAficionadoOff()" type="radio" value="0" checked>No
@@ -80,7 +80,7 @@
         <div id="aficionado">
             <input class="entrada" name="estudio" type="text" placeholder="Estudio fotográfico">
             <input class="entrada" name="direccionEstudio" type="text" placeholder="Dirección del estudio">
-            <input class="entrada" name="tel" type="tel" placeholder="Teléfono">
+            <input class="entrada" pattern="[0-9]{1,9}" name="tel" type="tel" placeholder="Teléfono">
         </div>
         <div id="submit">
             <input type="submit" value="Registrarse">

@@ -8,6 +8,34 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 </head>
 <body>
+
+<div id="login" class="popup">
+    <form class="popup-content animate">
+        <div class="imgperfil">
+                        <span onclick="document.getElementById('login').style.display='none'" class="close"
+                              title="Close Modal">&times;
+                        </span>
+            <img src="images/unknown_user.jpg" alt="Avatar" class="avatar">
+        </div>
+        <div class="container">
+            <label>Nombre de usuario</label>
+            <input type="text" placeholder="Introduzca nombre de usuario" name="uname" required>
+            <label>Contraseña</label>
+            <input type="password" placeholder="Introduzca contraseña" name="psw"
+                   required>
+            <button type="submit">Iniciar sesión</button>
+            <input type="checkbox" checked="checked"> Recuérdame
+        </div>
+        <div class="container" style="background-color: #f1f1f1">
+            <button type="button" onclick="document.getElementById('login').style.display='none'"
+                    class="cancelbtn">
+                Cancelar
+            </button>
+            <span class="psw"><a href="#">¿Olvidó su contraseña?</a></span>
+        </div>
+    </form>
+</div>
+
 <div class="titulo">
     <img id="logo" src="images/logo.png" alt="logo">
     <h1>I Like It!</h1>
@@ -20,7 +48,7 @@
     </div>
     <nav>
         <ul>
-            <li><a href="">Entra</a></li>
+            <li><a onclick="document.getElementById('login').style.display='block'">Entra</a></li>
             <li><a href="register.html">Regístrate</a></li>
         </ul>
     </nav>
@@ -242,6 +270,16 @@
     </div>
 </footer>
 <script>
+
+
+    /*no funciona bien porque div login ocupa más de lo debido*/
+    var login = document.getElementById('login');
+    window.onclick = function (event) {
+        if (event.target == login) {
+            login.style.display = "none";
+        }
+    };
+
     var likes = document.getElementsByClassName('fa-heart');
     for (var i = 0; i < likes.length; i++) {
         likes[i].addEventListener('click', changeLikeColor, false);
