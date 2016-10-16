@@ -15,7 +15,7 @@
 <hr>
 <h2>Regístrate para poder compartir las fotos de tus mejores platos</h2>
 <h3>Completa el siguiente formulario con tus datos</h3>
-<form action="URL">
+<form onsubmit="validateAll()">
     <fieldset>
         <legend>Dirección de registro</legend>
         <div class="flex">
@@ -83,7 +83,7 @@
             <input class="entrada" pattern="[0-9]{1,9}" name="tel" type="tel" placeholder="Teléfono">
         </div>
         <div id="submit">
-            <input type="submit" onclick="validateAll()" value="Registrarse">
+            <input type="submit" value="Registrarse">
         </div>
     </fieldset>
 </form>
@@ -119,8 +119,14 @@
             document.getElementById('pass2').style.backgroundColor = "#ff6666";
             validReg = false;
         }
-        if(validReg == true){
+        if(validReg == false){
+            window.scrollTo(0, 0);
+            event.preventDefault();
+        } else {
+            event.preventDefault()
             sendMail(cmail);
+            //deshacer el preventDefault jQuery???
+            //http://stackoverflow.com/questions/1551389/how-to-enable-default-after-event-preventdefault#1556696
         }
     }
     
@@ -147,7 +153,7 @@
             var passValid = false;
         } else {
             //document.getElementById("pass1").style.backgroundColor = "#66cc66";
-            document.getElementById("pass2").style.backgroundColor = "#66cc66";
+            //document.getElementById("pass2").style.backgroundColor = "#66cc66";
         }
         return passValid;
     }
@@ -159,7 +165,7 @@
             document.getElementById("mail2").style.backgroundColor = "#ff6666";
             var mailValid = false;
         } else {
-            document.getElementById("mail2").style.backgroundColor = "#66cc66";
+            //document.getElementById("mail2").style.backgroundColor = "#66cc66";
         }
         return mailValid;
     }
