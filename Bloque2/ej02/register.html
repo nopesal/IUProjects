@@ -89,26 +89,41 @@
 </form>
 <script>
 
+    function sendMail(dmail) {
+        window.location.href = "mailto:" + dmail;
+    }
+
+    var validReg = true;
     function validateAll() {
         if(document.getElementById('nombre').value == ""){
             document.getElementById('nombre').style.backgroundColor = "#ff6666";
+            validReg = false;
         }
         if(document.getElementById('apellido').value == ""){
             document.getElementById('apellido').style.backgroundColor = "#ff6666";
+            validReg = false;
         }
         if(document.getElementById('mail1').value == "" || mailMatch() == false){
             document.getElementById('mail1').style.backgroundColor = "#ff6666";
             document.getElementById('mail2').style.backgroundColor = "#ff6666";
+            validReg = false;
+        } else {
+            var cmail = document.getElementById('mail1').value;
         }
         if(document.getElementById('username').value == ""){
             document.getElementById('username').style.backgroundColor = "#ff6666";
+            validReg = false;
         }
         if(document.getElementById('pass1').value == "" || passMatch() == false){
             document.getElementById('pass1').style.backgroundColor = "#ff6666";
             document.getElementById('pass2').style.backgroundColor = "#ff6666";
+            validReg = false;
         }
-
+        if(validReg == true){
+            sendMail(cmail);
+        }
     }
+    
     var radios = document.getElementsByName('fotografia');
     for (var i = 0; i < radios.length; i++) {
         radios[i].addEventListener('click', toggleAficionado, false);
