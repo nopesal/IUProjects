@@ -19,8 +19,8 @@
     <fieldset>
         <legend>Dirección de registro</legend>
         <div class="flex">
-            <input class="entrada" name="name" type="text" placeholder="Nombre" style="margin-right: 1%" required>
-            <input class="entrada" name="surname" type="text" placeholder="Apellidos" required>
+            <input class="entrada" id="nombre" name="name" type="text" placeholder="Nombre" style="margin-right: 1%" required>
+            <input class="entrada" id="apellido" name="surname" type="text" placeholder="Apellidos" required>
         </div>
         <div>
             <input class="entrada" id="mail1"
@@ -34,7 +34,7 @@
     </fieldset>
     <fieldset>
         <legend>Información de usuario</legend>
-        <input class="entrada" name="username" type="text" placeholder="Usuario" required><br>
+        <input class="entrada" id="username" name="username" type="text" placeholder="Usuario" required><br>
         <div class="flex">
             <input class="entrada" id="pass1" onkeyup="passMatch()" name="password" type="password"
                    placeholder="Contraseña" maxlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[0-9]).{,8}"
@@ -83,12 +83,32 @@
             <input class="entrada" pattern="[0-9]{1,9}" name="tel" type="tel" placeholder="Teléfono">
         </div>
         <div id="submit">
-            <input type="submit" value="Registrarse">
+            <input type="submit" onclick="validateAll()" value="Registrarse">
         </div>
     </fieldset>
 </form>
 <script>
 
+    function validateAll() {
+        if(document.getElementById('nombre').value == ""){
+            document.getElementById('nombre').style.backgroundColor = "#ff6666";
+        }
+        if(document.getElementById('apellido').value == ""){
+            document.getElementById('apellido').style.backgroundColor = "#ff6666";
+        }
+        if(document.getElementById('mail1').value == "" || mailMatch() == false){
+            document.getElementById('mail1').style.backgroundColor = "#ff6666";
+            document.getElementById('mail2').style.backgroundColor = "#ff6666";
+        }
+        if(document.getElementById('username').value == ""){
+            document.getElementById('username').style.backgroundColor = "#ff6666";
+        }
+        if(document.getElementById('pass1').value == "" || passMatch() == false){
+            document.getElementById('pass1').style.backgroundColor = "#ff6666";
+            document.getElementById('pass2').style.backgroundColor = "#ff6666";
+        }
+
+    }
     var radios = document.getElementsByName('fotografia');
     for (var i = 0; i < radios.length; i++) {
         radios[i].addEventListener('click', toggleAficionado, false);
@@ -109,11 +129,12 @@
         if (pass1 != pass2) {
             //document.getElementById("pass1").style.backgroundColor = "#ff6666";
             document.getElementById("pass2").style.backgroundColor = "#ff6666";
+            var passValid = false;
         } else {
             //document.getElementById("pass1").style.backgroundColor = "#66cc66";
             document.getElementById("pass2").style.backgroundColor = "#66cc66";
         }
-
+        return passValid;
     }
 
     function mailMatch() {
@@ -121,9 +142,11 @@
         var mail2 = document.getElementById("mail2").value;
         if (mail1 != mail2) {
             document.getElementById("mail2").style.backgroundColor = "#ff6666";
+            var mailValid = false;
         } else {
             document.getElementById("mail2").style.backgroundColor = "#66cc66";
         }
+        return mailValid;
     }
 
     document.getElementById("files").onchange = function () {
