@@ -83,7 +83,7 @@
             <input class="entrada" pattern="[0-9]{1,9}" name="tel" type="tel" placeholder="Teléfono">
         </div>
         <div id="submit">
-            <input type="submit" value="Registrarse">
+            <input type="submit" value="Registrarse"> <!-- onclick="validateAll()"-->
         </div>
     </fieldset>
 </form>
@@ -123,7 +123,7 @@
             window.scrollTo(0, 0);
             event.preventDefault();
         } else {
-            event.preventDefault()
+            event.preventDefault();
             sendMail(cmail);
             //deshacer el preventDefault jQuery???
             //http://stackoverflow.com/questions/1551389/how-to-enable-default-after-event-preventdefault#1556696
