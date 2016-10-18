@@ -15,11 +15,12 @@
 <hr>
 <h2>Regístrate para poder compartir las fotos de tus mejores platos</h2>
 <h3>Completa el siguiente formulario con tus datos</h3>
-<form onsubmit="validateAll()">
+<form onsubmit="return(validateAll())">
     <fieldset>
         <legend>Dirección de registro</legend>
         <div class="flex">
-            <input class="entrada" id="nombre" name="name" type="text" placeholder="Nombre" style="margin-right: 1%" required>
+            <input class="entrada" id="nombre" name="name" type="text" placeholder="Nombre" style="margin-right: 1%"
+                   required>
             <input class="entrada" id="apellido" name="surname" type="text" placeholder="Apellidos" required>
         </div>
         <div>
@@ -36,6 +37,7 @@
         <legend>Información de usuario</legend>
         <input class="entrada" id="username" name="username" type="text" placeholder="Usuario" required><br>
         <div class="flex">
+            <!--TODO Revisar gramatica regular-->
             <input class="entrada" id="pass1" onkeyup="passMatch()" name="password" type="password"
                    placeholder="Contraseña" maxlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[0-9]).{,8}"
                    title="Letras minúsculas y números" style="margin-right: 1%" required>
@@ -74,14 +76,16 @@
             <input type="checkbox" name="intereses" value="16">Antigüedad
         </div>
         ¿Eres aficionado a la fotografía?
-        <input name="fotografia" onclick="toggleAficionadoOff()" type="radio" value="0" checked>No
-        <input name="fotografia" onclick="toggleAficionadoOn()" type="radio" value="1">Si
+        <input name="fotografia" type="radio" value="0" checked>No
+        <input name="fotografia" type="radio" value="1">Si
 
         <div id="aficionado">
+            <!--TODO Hacer obligatorios los atributos cuando sean profesionales-->
             <input class="entrada" name="estudio" type="text" placeholder="Estudio fotográfico">
             <input class="entrada" name="direccionEstudio" type="text" placeholder="Dirección del estudio">
             <input class="entrada" pattern="[0-9]{1,9}" name="tel" type="tel" placeholder="Teléfono">
         </div>
+        <!--TODO Poner He Leido y acepto las condiciones de uso-->
         <div id="submit">
             <input type="submit" value="Registrarse"> <!-- onclick="validateAll()"-->
         </div>
@@ -90,53 +94,48 @@
 <script>
 
     function sendMail(dmail) {
-        window.location.href = "mailto:" + dmail;
+        window.open('mailto:' + dmail);
     }
 
     var validReg = true;
     function validateAll() {
-        if(document.getElementById('nombre').value == ""){
+        if (document.getElementById('nombre').value == "") {
             document.getElementById('nombre').style.backgroundColor = "#ff6666";
             validReg = false;
         }
-        if(document.getElementById('apellido').value == ""){
+        if (document.getElementById('apellido').value == "") {
             document.getElementById('apellido').style.backgroundColor = "#ff6666";
             validReg = false;
         }
-        if(document.getElementById('mail1').value == "" || mailMatch() == false){
+        if (document.getElementById('mail1').value == "" || mailMatch() == false) {
             document.getElementById('mail1').style.backgroundColor = "#ff6666";
             document.getElementById('mail2').style.backgroundColor = "#ff6666";
             validReg = false;
         } else {
             var cmail = document.getElementById('mail1').value;
         }
-        if(document.getElementById('username').value == ""){
+        if (document.getElementById('username').value == "") {
             document.getElementById('username').style.backgroundColor = "#ff6666";
             validReg = false;
         }
-        if(document.getElementById('pass1').value == "" || passMatch() == false){
+        if (document.getElementById('pass1').value == "" || passMatch() == false) {
             document.getElementById('pass1').style.backgroundColor = "#ff6666";
             document.getElementById('pass2').style.backgroundColor = "#ff6666";
             validReg = false;
         }
-        if(validReg == false){
-            window.scrollTo(0, 0);
-            event.preventDefault();
-        } else {
-            event.preventDefault();
+        if (validReg == true) {
             sendMail(cmail);
-            //deshacer el preventDefault jQuery???
-            //http://stackoverflow.com/questions/1551389/how-to-enable-default-after-event-preventdefault#1556696
         }
+        return validReg;
     }
-    
+
     var radios = document.getElementsByName('fotografia');
     for (var i = 0; i < radios.length; i++) {
         radios[i].addEventListener('click', toggleAficionado, false);
     }
 
     function toggleAficionado() {
-        if(this.value == 1){
+        if (this.value == 1) {
             document.getElementById("aficionado").style.display = "block";
             window.scrollTo(0, document.body.scrollHeight);
         } else {
