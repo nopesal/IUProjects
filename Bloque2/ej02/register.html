@@ -80,7 +80,6 @@
         <input name="fotografia" type="radio" value="1">Si
 
         <div id="aficionado">
-            <!--TODO Hacer obligatorios los atributos cuando sean profesionales-->
             <input class="entrada" name="estudio" type="text" placeholder="Estudio fotográfico">
             <input class="entrada" name="direccionEstudio" type="text" placeholder="Dirección del estudio">
             <input class="entrada" pattern="[0-9]{1,9}" name="tel" type="tel" placeholder="Teléfono">
@@ -135,11 +134,16 @@
     }
 
     function toggleAficionado() {
+        var aficionado = document.getElementById("aficionado");
         if (this.value == 1) {
-            document.getElementById("aficionado").style.display = "block";
+            aficionado.style.display = "block";
             window.scrollTo(0, document.body.scrollHeight);
+            aficionado.children[0].required = true;
+            aficionado.children[1].required = true;
         } else {
-            document.getElementById("aficionado").style.display = "none";
+            aficionado.style.display = "none";
+            aficionado.children[0].required = false;
+            aficionado.children[1].required = false;
         }
     }
 
