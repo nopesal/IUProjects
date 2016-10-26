@@ -96,15 +96,12 @@ nav a:hover {
     margin: 40px auto auto;
 }
 
-/*TODO El contenido del row se sale de la caja. Hay que mirarlo.*/
-
 .grid-row {
     display: flex;
     margin-bottom: 6%;
 }
 
 .grid-cell {
-    flex: 0 0 32%;
     width: 30%;
     float: right;
 }
