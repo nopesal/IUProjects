@@ -15,7 +15,7 @@
 <hr>
 <h2>Regístrate para poder compartir las fotos de tus mejores platos</h2>
 <h3>Completa el siguiente formulario con tus datos</h3>
-<form onsubmit="return(validateAll())">
+<form onsubmit="return(validateAll())" action="index.html">
     <fieldset>
         <legend>Dirección de registro</legend>
         <div class="flex">
@@ -93,6 +93,7 @@
 <script>
 
     function sendMail(dmail) {
+        // TODO Poner parametros al correo
         window.open('mailto:' + dmail);
     }
 
@@ -124,6 +125,7 @@
         }
         if (validReg == true) {
             sendMail(cmail);
+            alert("Operación realizada con éxito");
         }
         return validReg;
     }
