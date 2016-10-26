@@ -135,8 +135,9 @@ textarea {
     height: 100%;
     float: left;
     border-width: 0;
-    font-size: large;
+    font-size: medium;
     padding: 0 0 0 2%;
+    font-family: 'Raleway', sans-serif;
 }
 
 .comment a {
