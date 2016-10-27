@@ -59,8 +59,6 @@
         <div class="grid-cell" style="margin-right: 5%">
             <div class="photo">
                 <a href=""><img src="images/14369204_689472331219838_975364581_n.jpg" alt="pic1"></a>
-                <div class="gradient"></div>
-                <p></p>
             </div>
             <div class="content">
                 <div class="comment">
@@ -76,12 +74,13 @@
                     <i class="fa fa-share-alt" aria-hidden="true"></i>
                 </div>
             </div>
+            <div class="comment-box">
+                <p></p>
+            </div>
         </div>
         <div class="grid-cell" style="margin-right: 5%">
             <div class="photo">
                 <a href=""><img src="images/12070913_1629946617264714_746237316_n.jpg" alt="pic2"></a>
-                <div class="gradient"></div>
-                <p></p>
             </div>
             <div class="content">
                 <div class="comment">
@@ -97,12 +96,13 @@
                     <i class="fa fa-share-alt" aria-hidden="true"></i>
                 </div>
             </div>
+            <div class="comment-box">
+                <p></p>
+            </div>
         </div>
         <div class="grid-cell">
             <div class="photo">
                 <a href=""><img src="images/12556145_1667886300117132_341009134_n.jpg" alt="pic3"></a>
-                <div class="gradient"></div>
-                <p></p>
             </div>
             <div class="content">
                 <div class="comment">
@@ -118,6 +118,9 @@
                     <i class="fa fa-share-alt" aria-hidden="true"></i>
                 </div>
             </div>
+            <div class="comment-box">
+                <p></p>
+            </div>
         </div>
     </div>
 
@@ -125,8 +128,6 @@
         <div class="grid-cell" style="margin-right: 5%">
             <div class="photo">
                 <a href=""><img src="images/13561674_1584680545159259_1998300102_n.jpg" alt="pic4"></a>
-                <div class="gradient"></div>
-                <p></p>
             </div>
             <div class="content">
                 <div class="comment">
@@ -142,12 +143,13 @@
                     <i class="fa fa-share-alt" aria-hidden="true"></i>
                 </div>
             </div>
+            <div class="comment-box">
+                <p></p>
+            </div>
         </div>
         <div class="grid-cell" style="margin-right: 5%">
             <div class="photo">
                 <a href=""><img src="images/13712336_1603506346646327_2115627276_n.jpg" alt="pic5"></a>
-                <div class="gradient"></div>
-                <p></p>
             </div>
             <div class="content">
                 <div class="comment">
@@ -163,12 +165,13 @@
                     <i class="fa fa-share-alt" aria-hidden="true"></i>
                 </div>
             </div>
+            <div class="comment-box">
+                <p></p>
+            </div>
         </div>
         <div class="grid-cell">
             <div class="photo">
                 <a href=""><img src="images/13744079_133994890372410_370468037_n.jpg" alt="pic6"></a>
-                <div class="gradient"></div>
-                <p></p>
             </div>
             <div class="content">
                 <div class="comment">
@@ -184,6 +187,9 @@
                     <i class="fa fa-share-alt" aria-hidden="true"></i>
                 </div>
             </div>
+            <div class="comment-box">
+                <p></p>
+            </div>
         </div>
     </div>
 
@@ -191,8 +197,6 @@
         <div class="grid-cell" style="margin-right: 5%">
             <div class="photo">
                 <a href=""><img src="images/14295568_342910602715634_790979400_n.jpg" alt="pic7"></a>
-                <div class="gradient"></div>
-                <p></p>
             </div>
             <div class="content">
                 <div class="comment">
@@ -208,12 +212,13 @@
                     <i class="fa fa-share-alt" aria-hidden="true"></i>
                 </div>
             </div>
+            <div class="comment-box">
+                <p></p>
+            </div>
         </div>
         <div class="grid-cell" style="margin-right: 5%">
             <div class="photo">
                 <a href=""><img src="images/14334722_143569652763035_620291577_n.jpg" alt="pic8"></a>
-                <div class="gradient"></div>
-                <p></p>
             </div>
             <div class="content">
                 <div class="comment">
@@ -229,12 +234,13 @@
                     <i class="fa fa-share-alt" aria-hidden="true"></i>
                 </div>
             </div>
+            <div class="comment-box">
+                <p></p>
+            </div>
         </div>
         <div class="grid-cell">
             <div class="photo">
                 <a href=""><img src="images/14350592_1746015235659379_1057064444514795520_n.jpg" alt="pic9"></a>
-                <div class="gradient"></div>
-                <p></p>
             </div>
             <div class="content">
                 <div class="comment">
@@ -249,6 +255,9 @@
                     <i class="fa fa-comment" aria-hidden="true"></i>
                     <i class="fa fa-share-alt" aria-hidden="true"></i>
                 </div>
+            </div>
+            <div class="comment-box">
+                <p></p>
             </div>
         </div>
     </div>
@@ -307,7 +316,10 @@
     }
 
     function commentOn() {
-        this.parentNode.parentNode.firstElementChild.style.display = 'inline';
+        var comment = this.parentNode.parentNode.firstElementChild;
+        comment.style.display = 'inline';
+        var textarea = comment.firstElementChild;
+        textarea.focus();
     }
 
     var paperplanes = document.getElementsByClassName('fa-paper-plane');
@@ -315,14 +327,35 @@
         paperplanes[i].addEventListener('click', commentOff, false);
     }
 
+    //    TODO Falta hacer el signo menos para volver a contraer el texto?
     function commentOff() {
         var comment = this.parentNode.parentNode;
         var textarea = comment.firstElementChild;
-        var photo = comment.parentNode.previousElementSibling;
-        var p = photo.children[2];
-
+        var commentBox = comment.parentNode.nextElementSibling;
+        var p = commentBox.firstElementChild;
         comment.style.display = 'none';
-        p.innerHTML = textarea.value;
+
+        if (textarea.value != "") {
+            commentBox.style.display = 'flex';
+            if (textarea.value.length > 30) {
+                p.innerHTML = textarea.value.substring(0, 30);
+                var hiddenText = textarea.value.substr(30, textarea.value.length);
+                p.insertAdjacentHTML('beforeend', '<i class="fa fa-plus" aria-hidden="true">');
+                var pluses = document.getElementsByClassName('fa-plus');
+                for (i = 0; i < pluses.length; i++) {
+                    pluses[i].addEventListener('click', function () {
+                        showMore(hiddenText, i, pluses);
+                    }, false);
+                }
+            } else {
+                p.innerHTML = textarea.value;
+            }
+        }
+    }
+
+    function showMore(mensaje, j, mases) {
+        mases[j - 1].parentNode.insertAdjacentHTML('beforeend', mensaje);
+        mases[j - 1].remove();
     }
 
     var gridCell = document.getElementsByClassName('grid-cell');

@@ -93,18 +93,16 @@ nav a:hover {
 
 .grid {
     width: 100%;
-    max-width: 80%;
+    max-width: 91%;
     margin: 40px auto auto;
 }
 
 .grid-row {
     display: flex;
-    margin-bottom: 5%;
+    margin-bottom: 6%;
 }
 
 .grid-cell {
-    flex: 0 0 32%;
-    margin-bottom: 1%;
     width: 30%;
     float: right;
 }
@@ -121,6 +119,7 @@ img {
 
 .photo {
     position: relative;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .comment {
@@ -137,8 +136,9 @@ textarea {
     height: 100%;
     float: left;
     border-width: 0;
-    font-size: large;
+    font-size: medium;
     padding: 0 0 0 2%;
+    font-family: 'Raleway', sans-serif;
 }
 
 .comment a {
@@ -152,15 +152,6 @@ textarea {
     background-color: #177b7c;
 }
 
-.gradient {
-    background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.8), rgba(255, 255, 0, 0));
-    height: 35%;
-    width: 100%;
-    bottom: 0;
-    left: 0;
-    position: absolute;
-    display: none;
-}
 
 .photo p {
     position: absolute;
@@ -174,15 +165,28 @@ textarea {
     display: none;
 }
 
-.spacer {
-    padding: 0 5px;
-}
-
 .content {
     background-color: #b9fdbc;
     text-align: center;
     overflow: auto;
     position: relative;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.comment-box {
+    background-color: #9ce7d2;
+    margin-left: 5%;
+    margin-right: 5%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: none;
+}
+
+.comment-box p {
+    width: 100%;
+    font-size: 0.8em;
+    text-align: left;
+    margin-right: 5%;
+    margin-left: 5%;
 }
 
 .pic-title {
