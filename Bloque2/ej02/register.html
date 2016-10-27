@@ -58,22 +58,22 @@
     <fieldset>
         <legend>Información de intereses y hobbies</legend>
         <div id="intereses">
-            <input type="checkbox" name="intereses" value="1">Arte
-            <input type="checkbox" name="intereses" value="2">Coches
-            <input type="checkbox" name="intereses" value="3">Cocina
-            <input type="checkbox" name="intereses" value="4">Manualidades
-            <input type="checkbox" name="intereses" value="5">Citas
-            <input type="checkbox" name="intereses" value="6">Juego
-            <input type="checkbox" name="intereses" value="7">Música
-            <input type="checkbox" name="intereses" value="8">Animales
-            <input type="checkbox" name="intereses" value="9">Política
-            <input type="checkbox" name="intereses" value="10">Lectura
-            <input type="checkbox" name="intereses" value="11">Deporte
-            <input type="checkbox" name="intereses" value="12">Televisión
-            <input type="checkbox" name="intereses" value="13">Industria
-            <input type="checkbox" name="intereses" value="14">Tecnología
-            <input type="checkbox" name="intereses" value="15">Sorteos
-            <input type="checkbox" name="intereses" value="16">Antigüedad
+            <input type="checkbox" name="intereses" value="Arte">Arte
+            <input type="checkbox" name="intereses" value="Coches">Coches
+            <input type="checkbox" name="intereses" value="Cocina">Cocina
+            <input type="checkbox" name="intereses" value="Manualidades">Manualidades
+            <input type="checkbox" name="intereses" value="Citas">Citas
+            <input type="checkbox" name="intereses" value="Juego">Juego
+            <input type="checkbox" name="intereses" value="Música">Música
+            <input type="checkbox" name="intereses" value="Animales">Animales
+            <input type="checkbox" name="intereses" value="Política">Política
+            <input type="checkbox" name="intereses" value="Lectura">Lectura
+            <input type="checkbox" name="intereses" value="Deporte">Deporte
+            <input type="checkbox" name="intereses" value="Televisión">Televisión
+            <input type="checkbox" name="intereses" value="Industria">Industria
+            <input type="checkbox" name="intereses" value="Tecnología">Tecnología
+            <input type="checkbox" name="intereses" value="Sorteos">Sorteos
+            <input type="checkbox" name="intereses" value="Antigüedad">Antigüedad
         </div>
         ¿Eres aficionado a la fotografía?
         <input name="fotografia" type="radio" value="0" checked>No
@@ -91,40 +91,87 @@
     </fieldset>
 </form>
 <script>
+    //TODO Probar si funciona en otro ordenador
+    //TODO Ponerse de acuerdo con comillas dobles o simples
+    function sendMail(email, nombre, apellidos, usuario, password) {
+        window.open("mailto:" + email + "?" +
+                "subject=Registro completado"
+                + "&" + "body=" +
+                "Nombre: " + nombre + "\n" + "&" +
+                "Apellidos: " + apellidos + "\n" + "&" +
+                "Usuario: " + usuario + "\n" + "&" +
+                "Password: " + password + "\n" + "&" +
+                "Intereses: " + getIntereses() + "\n" +
+                getDatosAficionado()
+        );
+    }
 
-    function sendMail(dmail) {
-        // TODO Poner parametros al correo
-        window.open('mailto:' + dmail);
+    function getIntereses() {
+        var intereses = document.getElementById("intereses");
+        var checkboxes = intereses.children;
+        var misIntereses = "";
+        for (var i = 0; i < checkboxes.length; i++) {
+            if (checkboxes[i].checked) {
+                misIntereses = misIntereses + checkboxes[i].value + " ";
+            }
+        }
+        if (misIntereses == "") {
+            return "Ninguno";
+        }
+        return misIntereses;
+    }
+
+    function getDatosAficionado() {
+        var aficionado = document.getElementById("aficionado");
+        if (aficionado.style.display == "block") {
+            var estudio = aficionado.children[0].value;
+            var direccion = aficionado.children[1].value;
+            var telefono = aficionado.children[2].value;
+            return "Estudio: " + estudio + "\n" +
+                    "Dirección del estudio: " + direccion + "\n" +
+                    "Teléfono: " + telefono;
+        } else {
+            return "";
+        }
     }
 
     var validReg = true;
     function validateAll() {
-        if (document.getElementById('nombre').value == "") {
-            document.getElementById('nombre').style.backgroundColor = "#ff6666";
+        var elementoNombre = document.getElementById('nombre');
+        if (elementoNombre.value == "") {
+            elementoNombre.style.backgroundColor = "#ff6666";
             validReg = false;
         }
-        if (document.getElementById('apellido').value == "") {
-            document.getElementById('apellido').style.backgroundColor = "#ff6666";
+
+        var elementoApellidos = document.getElementById('apellido');
+        if (elementoApellidos.value == "") {
+            elementoApellidos.style.backgroundColor = "#ff6666";
             validReg = false;
         }
-        if (document.getElementById('mail1').value == "" || mailMatch() == false) {
-            document.getElementById('mail1').style.backgroundColor = "#ff6666";
+        var elementoEmail = document.getElementById('mail1');
+        if (elementoEmail.value == "" || mailMatch() == false) {
+            elementoEmail.style.backgroundColor = "#ff6666";
             document.getElementById('mail2').style.backgroundColor = "#ff6666";
             validReg = false;
-        } else {
-            var cmail = document.getElementById('mail1').value;
         }
-        if (document.getElementById('username').value == "") {
-            document.getElementById('username').style.backgroundColor = "#ff6666";
+        var elementoUsuario = document.getElementById('username');
+        if (elementoUsuario.value == "") {
+            elementoUsuario.style.backgroundColor = "#ff6666";
             validReg = false;
         }
-        if (document.getElementById('pass1').value == "" || passMatch() == false) {
-            document.getElementById('pass1').style.backgroundColor = "#ff6666";
+        var elementoPassword = document.getElementById('pass1');
+        if (elementoPassword.value == "" || passMatch() == false) {
+            elementoPassword.style.backgroundColor = "#ff6666";
             document.getElementById('pass2').style.backgroundColor = "#ff6666";
             validReg = false;
         }
         if (validReg == true) {
-            sendMail(cmail);
+            sendMail(elementoEmail.value,
+                    elementoNombre.value,
+                    elementoApellidos.value,
+                    elementoUsuario.value,
+                    elementoPassword.value
+            );
             alert("Operación realizada con éxito");
         }
         return validReg;
