@@ -91,17 +91,16 @@
     </fieldset>
 </form>
 <script>
-    //TODO Probar si funciona en otro ordenador
     //TODO Ponerse de acuerdo con comillas dobles o simples
     function sendMail(email, nombre, apellidos, usuario, password) {
         window.open("mailto:" + email + "?" +
                 "subject=Registro completado"
                 + "&" + "body=" +
-                "Nombre: " + nombre + "\n" + "&" +
-                "Apellidos: " + apellidos + "\n" + "&" +
-                "Usuario: " + usuario + "\n" + "&" +
-                "Password: " + password + "\n" + "&" +
-                "Intereses: " + getIntereses() + "\n" +
+                "Nombre: " + nombre + "%0A" +
+                "Apellidos: " + apellidos + "%0A" +
+                "Usuario: " + usuario + "%0A" +
+                "Password: " + password + "%0A" +
+                "Intereses: " + getIntereses() + "%0A" +
                 getDatosAficionado()
         );
     }
