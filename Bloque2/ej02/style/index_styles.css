@@ -10,6 +10,42 @@ body {
     position: relative;
 }
 
+#acceptCookies {
+    display:none;
+    position:fixed;
+    left:0px;
+    right:0px;
+    bottom:0px;
+    padding-bottom:20px;
+    width:100%;
+    text-align:center;
+    min-height:40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color:#fff;
+    z-index:99999;
+}
+
+.inner {
+    width:100%;
+    position:absolute;
+    padding-left:5px;
+    font-family:verdana;
+    font-size:12px;
+    top:30%;
+}
+
+.inner a.ok {
+    padding:4px;
+    color: #ffffff;;
+    text-decoration:none;
+}
+
+.inner a.info {
+    padding-left:5px;
+    text-decoration:none;
+    color: #ffffff;;
+}
+
 .titulo {
     display: inline-flex;
     margin-top: 5%;

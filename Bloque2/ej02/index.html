@@ -23,7 +23,7 @@
             <label>Contraseña</label>
             <input type="password" placeholder="Introduzca contraseña" name="psw"
                    required>
-            <button type="submit">Iniciar sesión</button>
+            <button type="submit" onclick="logIn(uname.value, psw.value)">Iniciar sesión</button>
             <input type="checkbox" checked="checked"> Recuérdame
         </div>
         <div class="container" style="background-color: #f1f1f1">
@@ -44,9 +44,9 @@
 <div class="menu">
     <div class="user">
         <img id="user-logo" src="images/unknown_user.jpg" alt="user_logo">
-        <a href="">Invitado</a>
+        <a id="user-name" href="">Invitado</a>
     </div>
-    <nav>
+    <nav id="menu">
         <ul>
             <li><a onclick="document.getElementById('login').style.display='block'">Entra</a></li>
             <li><a href="register.html">Regístrate</a></li>
@@ -262,7 +262,6 @@
         </div>
     </div>
 </div>
-
 <footer class="footer">
     <div class="social">
         <ul class="footer-list">
@@ -278,8 +277,47 @@
         </ul>
     </div>
 </footer>
+<div id="acceptCookies" style="display: block;">
+    <div class="inner">
+        Solicitamos su permiso para obtener datos estadísticos de su navegación en esta web, en cumplimiento del Real
+        Decreto-ley 13/2012. Si continúa navegando consideramos que acepta el uso de cookies.
+        <a href="javascript:void(0);" class="ok" onclick="PonerCookie();"><b>OK</b></a> |
+        <a href="http://politicadecookies.com" target="_blank" class="info">Más información</a>
+    </div>
+</div>
 <script>
-    /*TODO no funciona bien porque div login ocupa más de lo debido*/
+
+    function logIn(uname, psw) {
+        if(uname == readCookie("username") && psw == readCookie("password")) {
+            //cambiar menú
+            document.getElementById("user-logo").src="images/woman.png";
+            document.getElementById('user-name').innerHTML = "<a id='user-name'>blonderwall</a>";
+            document.getElementById('menu').innerHTML = "<ul><li style='width: 25%;'><a href=''>My Gallery</a></li><li><a href=''>Upload</a></li><li><a href=''>Explore</a></li><li style='width: 35%'><a href=''>Account Settings</a></li></ul>";
+            document.getElementById("menu").firstElementChild.childNodes[0].style.width = "25%";
+            document.getElementById("menu").firstElementChild.childNodes[1].style.width = "25%";
+            document.getElementById("menu").firstElementChild.childNodes[2].style.width = "25%";
+            document.getElementById("menu").firstElementChild.childNodes[3].style.width = "25%";
+            document.getElementById("menu").style.width = "60%";
+            event.preventDefault();
+        } else {
+            document.cookie="username=" + uname;
+            document.cookie="password=" + psw;
+        }
+    }
+
+    function readCookie(search) {
+        var nameCo = search + "=";
+        var ca = document.cookie.split(';');
+        for(var i=0;i < ca.length;i++) {
+            var c = ca[i];
+            while (c.charAt(0)==' ') c = c.substring(1,c.length);
+            if (c.indexOf(nameCo) == 0) return c.substring(nameCo.length,c.length);
+        }
+        return null;
+    }
+
+
+    /*no funciona bien porque div login ocupa más de lo debido*/
     var login = document.getElementById('login');
     window.onclick = function (event) {
         if (event.target == login) {
