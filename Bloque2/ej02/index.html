@@ -299,7 +299,6 @@
             document.getElementById("menu").firstElementChild.childNodes[2].style.width = "25%";
             document.getElementById("menu").firstElementChild.childNodes[3].style.width = "25%";
             document.getElementById("menu").style.width = "60%";
-            event.preventDefault();
         } else {
             document.cookie="username=" + uname;
             document.cookie="password=" + psw;
@@ -394,23 +393,6 @@
         mases[j - 1].parentNode.insertAdjacentHTML('beforeend', mensaje);
         mases[j - 1].remove();
     }
-
-    var gridCell = document.getElementsByClassName('grid-cell');
-    for (i = 0; i < gridCell.length; i++) {
-        gridCell[i].addEventListener('mouseover', showText, false);
-        gridCell[i].addEventListener('mouseout', hideText, false);
-    }
-
-    function showText() {
-        this.firstElementChild.children[1].style.display = 'block';
-        this.firstElementChild.children[2].style.display = 'block';
-    }
-
-    function hideText() {
-        this.firstElementChild.children[1].style.display = 'none';
-        this.firstElementChild.children[2].style.display = 'none';
-    }
-
 </script>
 </body>
 </html>
