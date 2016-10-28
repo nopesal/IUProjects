@@ -84,9 +84,9 @@
             <input class="entrada" name="direccionEstudio" type="text" placeholder="Dirección del estudio">
             <input class="entrada" pattern="[0-9]{1,9}" name="tel" type="tel" placeholder="Teléfono">
         </div>
-        <!--TODO Poner He Leido y acepto las condiciones de uso-->
+        <div><input id="condiciones" type="checkbox" required>He leído y acepto las condiciones de uso.</div>
         <div id="submit">
-            <input type="submit" value="Registrarse"> <!-- onclick="validateAll()"-->
+            <input type="submit" value="Registrarse">
         </div>
     </fieldset>
 </form>
@@ -196,27 +196,37 @@
     }
 
     function passMatch() {
-        var pass1 = document.getElementById('pass1').value;
-        var pass2 = document.getElementById('pass2').value;
-        if (pass1 != pass2) {
-            //document.getElementById("pass1").style.backgroundColor = "#ff6666";
-            document.getElementById("pass2").style.backgroundColor = "#ff6666";
-            var passValid = false;
+        var password1 = document.getElementById('pass1').value;
+        var password2 = document.getElementById("pass2");
+        var passValid = true;
+        if (password1 == "" && password2.value == "") {
+            password2.className = "entrada";
+            password2.style.backgroundColor = "transparent";
+        } else if (password1 != password2.value) {
+            password2.className = "entrada-mal";
+            password2.style.backgroundColor = "#ff6666";
+            passValid = false;
         } else {
-            //document.getElementById("pass1").style.backgroundColor = "#66cc66";
-            //document.getElementById("pass2").style.backgroundColor = "#66cc66";
+            password2.className = "entrada";
+            password2.style.backgroundColor = "#6ce695";
         }
         return passValid;
     }
 
     function mailMatch() {
         var mail1 = document.getElementById("mail1").value;
-        var mail2 = document.getElementById("mail2").value;
-        if (mail1 != mail2) {
-            document.getElementById("mail2").style.backgroundColor = "#ff6666";
-            var mailValid = false;
+        var mail2 = document.getElementById("mail2");
+        var mailValid = true;
+        if (mail1 == "" && mail2.value == "") {
+            mail2.className = "entrada";
+            mail2.style.backgroundColor = "transparent";
+        } else if (mail1 != mail2.value) {
+            mail2.className = "entrada-mal";
+            mail2.style.backgroundColor = "#ff6666";
+            mailValid = false;
         } else {
-            //document.getElementById("mail2").style.backgroundColor = "#66cc66";
+            mail2.className = "entrada";
+            mail2.style.backgroundColor = "#6ce695";
         }
         return mailValid;
     }
