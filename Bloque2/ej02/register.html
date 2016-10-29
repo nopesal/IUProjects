@@ -37,13 +37,12 @@
         <legend>Información de usuario</legend>
         <input class="entrada" id="username" name="username" type="text" placeholder="Usuario" required><br>
         <div class="flex">
-            <!--TODO Revisar gramatica regular-->
             <input class="entrada" id="pass1" onkeyup="passMatch()" name="password" type="password"
                    placeholder="Contraseña" maxlength="8" pattern="[0-9a-z]{0,8}"
-                   title="Letras minúsculas y números" style="margin-right: 1%" required>
+                   title="Sólo letras minúsculas y números" style="margin-right: 1%" required>
             <input class="entrada" id="pass2" onkeyup="passMatch()" name="confirmPassword" type="password"
                    placeholder="Confirmar contraseña" maxlength="8" pattern="[0-9a-z]{0,8}"
-                   title="Letras minúsculas y números" required>
+                   title="Sólo letras minúsculas y números" required>
         </div>
         <small>La contraseña sólo puede contener letras minúsculas y números.</small>
         <div id="profile-picture">
@@ -83,6 +82,7 @@
             <input class="entrada" name="estudio" type="text" placeholder="Estudio fotográfico">
             <input class="entrada" name="direccionEstudio" type="text" placeholder="Dirección del estudio">
             <input class="entrada" pattern="[0-9]{1,9}" name="tel" type="tel" placeholder="Teléfono">
+            <small>El campo Teléfono es opcional.</small>
         </div>
         <div><input id="condiciones" type="checkbox" required>He leído y acepto las condiciones de uso.</div>
         <div id="submit">

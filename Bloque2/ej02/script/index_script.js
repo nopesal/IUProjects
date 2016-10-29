@@ -1,33 +1,39 @@
-function logIn(uname, psw) {
-    if(uname == readCookie("username") && psw == readCookie("password")) {
-        //cambiar menú
-        document.getElementById("user-logo").src="images/woman.png";
-        document.getElementById('user-name').innerHTML = "<a id='user-name'>blonderwall</a>";
-        document.getElementById('menu').innerHTML = "<ul><li style='width: 25%;'><a href=''>My Gallery</a></li><li><a href=''>Upload</a></li><li><a href=''>Explore</a></li><li style='width: 35%'><a href=''>Account Settings</a></li></ul>";
-        document.getElementById("menu").firstElementChild.childNodes[0].style.width = "25%";
-        document.getElementById("menu").firstElementChild.childNodes[1].style.width = "25%";
-        document.getElementById("menu").firstElementChild.childNodes[2].style.width = "25%";
-        document.getElementById("menu").firstElementChild.childNodes[3].style.width = "25%";
-        document.getElementById("menu").style.width = "60%";
+function logIn(username, password) {
+    if (username == readCookie("username") && password == readCookie("password")) {
+        document.getElementById("user-logo").src = "images/woman.png";
+        document.getElementById('user-name').innerHTML = "<a id='user-name'>" + username + "</a>";
+
+        var menu = document.getElementById("menu");
+        menu.innerHTML = "<ul>" +
+            "<li><a href='#'>My Gallery</a></li>" +
+            "<li><a href='#'>Upload</a></li>" +
+            "<li><a href='#'>Explore</a></li>" +
+            "<li><a href='#'>Account Settings</a></li>" +
+            "</ul>";
+        menu.firstElementChild.childNodes[0].style.width = "25%";
+        menu.firstElementChild.childNodes[1].style.width = "25%";
+        menu.firstElementChild.childNodes[2].style.width = "25%";
+        menu.firstElementChild.childNodes[3].style.width = "25%";
+        menu.style.width = "60%";
     } else {
-        document.cookie="username=" + uname;
-        document.cookie="password=" + psw;
+        document.cookie = "username=" + username;
+        document.cookie = "password=" + password;
     }
+    document.getElementById('login').style.display='none';
 }
 
 function readCookie(search) {
-    var nameCo = search + "=";
-    var ca = document.cookie.split(';');
-    for(var i=0;i < ca.length;i++) {
-        var c = ca[i];
-        while (c.charAt(0)==' ') c = c.substring(1,c.length);
-        if (c.indexOf(nameCo) == 0) return c.substring(nameCo.length,c.length);
+    var cookieName = search + "=";
+    var cookieAttribute = document.cookie.split(';');
+    for (var i = 0; i < cookieAttribute.length; i++) {
+        var cookie = cookieAttribute[i];
+        while (cookie.charAt(0) == ' ') cookie = cookie.substring(1, cookie.length);
+        if (cookie.indexOf(cookieName) == 0) return cookie.substring(cookieName.length, cookie.length);
     }
     return null;
 }
 
 
-/*no funciona bien porque div login ocupa más de lo debido*/
 var login = document.getElementById('login');
 window.onclick = function (event) {
     if (event.target == login) {
@@ -37,9 +43,9 @@ window.onclick = function (event) {
 
 var likes = document.getElementsByClassName('fa-heart');
 for (var i = 0; i < likes.length; i++) {
-    likes[i].addEventListener('click', changeLikeColor, false);
+    likes[i].addEventListener('click', changeLikeButtonColor, false);
 }
-function changeLikeColor() {
+function changeLikeButtonColor() {
     if (this.style.color == 'red') {
         this.style.color = 'grey';
     } else {
@@ -73,7 +79,6 @@ for (i = 0; i < paperplanes.length; i++) {
     paperplanes[i].addEventListener('click', commentOff, false);
 }
 
-//    TODO Falta hacer el signo menos para volver a contraer el texto?
 function commentOff() {
     var comment = this.parentNode.parentNode;
     var textarea = comment.firstElementChild;
@@ -99,7 +104,7 @@ function commentOff() {
     }
 }
 
-function showMore(mensaje, j, mases) {
-    mases[j - 1].parentNode.insertAdjacentHTML('beforeend', mensaje);
-    mases[j - 1].remove();
+function showMore(mensaje, j, pluses) {
+    pluses[j - 1].parentNode.insertAdjacentHTML('beforeend', mensaje);
+    pluses[j - 1].remove();
 }
