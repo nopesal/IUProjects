@@ -1,7 +1,7 @@
-$( init );
+$(init);
 
 function init() {
-    var correctFruits = 0;
+    var correctFigures = 0;
     /*$('#winMessage').hide();
      $('#winMessage').css( {
      left: '580px',
@@ -10,48 +10,65 @@ function init() {
      height: 0
      } );*/
 
-    $( function() {
-        $( ".draggable" ).draggable({
-            containment: document.getElementById("tablero"),
-            cursor: 'move'
-        });
-        $( ".droppable" ).droppable({
-            drop: function (event, ui) {
-                if($(this).data('fruit') == ui.draggable.data('fruit')){
-                    if($(this).data('fruit') == "apple"){
-                        $(this).addClass("droppedApple");
-                        $(this).droppable('disable');
-                        ui.draggable.remove();
-                        correctFruits = correctFruits + 1;
-                        console.log(correctFruits);
-                        if(correctFruits == 3){
-                            winMessage();
-                        }
-                    } else if($(this).data('fruit') == "banana") {
-                        $(this).addClass("droppedBanana");
-                        $(this).droppable('disable');
-                        ui.draggable.remove();
-                        correctFruits = correctFruits + 1;
-                        console.log(correctFruits);
-                        if(correctFruits == 3){
-                            winMessage();
-                        }
-                    } else if($(this).data('fruit') == "pear") {
-                        $(this).addClass("droppedPear");
-                        $(this).droppable('disable');
-                        ui.draggable.remove();
-                        correctFruits = correctFruits + 1;
-                        console.log(correctFruits);
-                        if(correctFruits == 3){
-                            winMessage();
+    $(function () {
+        $(".draggable")
+            .draggable({
+                containment: document.getElementById("tablero"),
+                cursor: 'move',
+                revert: true
+            });
+
+        $(".droppable")
+            .droppable({
+                drop: function (event, ui) {
+                    if ($(this).data('halloween') == ui.draggable.data('halloween')) {
+                        if ($(this).data('halloween') == "cat") {
+                            $(this).addClass("droppedCat");
+                            $(this).droppable('disable');
+                            ui.draggable.remove();
+                            correctFigures = correctFigures + 1;
+                            console.log(correctFigures);
+                            if (correctFigures == 4) {
+                                winMessage();
+                            }
+                        } else if ($(this).data('halloween') == "ghost") {
+                            $(this).addClass("droppedGhost");
+                            $(this).droppable('disable');
+                            ui.draggable.remove();
+                            correctFigures = correctFigures + 1;
+                            console.log(correctFigures);
+                            if (correctFigures == 4) {
+                                winMessage();
+                            }
+                        } else if ($(this).data('halloween') == "pumpkin") {
+                            $(this).addClass("droppedPumpkin");
+                            $(this).droppable('disable');
+                            ui.draggable.remove();
+                            correctFigures = correctFigures + 1;
+                            console.log(correctFigures);
+                            if (correctFigures == 4) {
+                                winMessage();
+                            }
+                        } else if ($(this).data('halloween') == "skeleton") {
+                            $(this).addClass("droppedSkeleton");
+                            $(this).droppable('disable');
+                            ui.draggable.remove();
+                            correctFigures = correctFigures + 1;
+                            console.log(correctFigures);
+                            if (correctFigures == 4) {
+                                winMessage();
+                            }
                         }
                     }
                 }
-            }
-        });
-    } );
+            });
+    });
 
     function winMessage() {
-        alert("¡HAS GANADO EL JUEGO DE LA MUERTE!");
+        alert("¡HAS GANADO EL JUEGO DE LA MUERTE!").delay(10000);
     }
+}
+
+function reset() {
+
 }

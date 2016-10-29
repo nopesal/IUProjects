@@ -12,20 +12,16 @@
 <body>
 <div class="titulo">
     <!--Poner logo-->
-    <img id="logo" src="images/logo.png" alt="logo">
+    <img id="logo" src="images/Bat-icon.png" alt="logo">
     <h1>El Juego de la Muerte</h1>
 </div>
 <hr>
-<div class="menu">
-    <div class="gamemenu">
-        <a href="">Menú del juego</a>
-    </div>
-    <nav id="menu">
-        <ul>
-            <li><a onclick="init()">Reiniciar partida</a></li>
-        </ul>
-    </nav>
-</div>
+<nav id="menu">
+    <ul>
+        <li><a href="#">Menú del juego</a></li>
+        <li><a href="">Reiniciar partida</a></li>
+    </ul>
+</nav>
 <hr>
 <div id="instructions">
     <p>
@@ -36,33 +32,39 @@
 </div>
 <div id="tablero">
     <!--Columna origen-->
-    <div class="col" id="orig">
+    <div class="column" id="orig">
         <p>Origen</p>
-        <div class="draggable" data-fruit="apple">
-            <img class="outline" id="fillapple" src="images/appleorig.png">
+        <div class="draggable" data-halloween="cat">
+            <img class="outline" id="fillcat" src="images/Cat-icon.png">
         </div>
-        <div class="draggable" data-fruit="banana">
-            <img class="outline" id="fillbanana" src="images/bananaorig.png">
+        <div class="draggable" data-halloween="ghost">
+            <img class="outline" id="fillghost" src="images/Ghost-icon.png">
         </div>
-        <div class="draggable" data-fruit="pear">
-            <img class="outline" id="fillpear" src="images/pearorig.png">
+        <div class="draggable" data-halloween="pumpkin">
+            <img class="outline" id="fillpumpkin" src="images/Pumpkin-icon.png">
+        </div>
+        <div class="draggable" data-halloween="skeleton">
+            <img class="outline" id="fillskeleton" src="images/Skeleton-icon.png">
         </div>
     </div>
     <!--Columna trayecto-->
-    <div class="col" id="tray">
+    <div class="column" id="tray">
         <p>Trayecto</p>
     </div>
     <!--Columna destino-->
-    <div class="col" id="dest">
+    <div class="column" id="dest">
         <p>Destino</p>
-        <div class="droppable" data-fruit="apple">
-            <img class="outline" id="olapple" src="images/apple.png">
+        <div class="droppable" data-halloween="cat">
+            <img class="outline" id="olcat" src="images/Cat-icon-transparent.png">
         </div>
-        <div class="droppable" data-fruit="banana">
-            <img class="outline" id="olbanana" src="images/banana.png">
+        <div class="droppable" data-halloween="ghost">
+            <img class="outline" id="olghost" src="images/Ghost-icon-transparent.png">
         </div>
-        <div class="droppable" data-fruit="pear">
-            <img class="outline" id="olpear" src="images/pear.png">
+        <div class="droppable" data-halloween="pumpkin">
+            <img class="outline" id="olpumpkin" src="images/Pumpkin-icon-transparent.png">
+        </div>
+        <div class="droppable" data-halloween="skeleton">
+            <img class="outline" id="olskeleton" src="images/Skeleton-icon-transparent.png">
         </div>
     </div>
 </div>
