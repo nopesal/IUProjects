@@ -25,15 +25,15 @@ body{
     width: 25%;
 }
 .droppedApple{
-    background-color: red;
+    background-color: #ff0000;
 }
 
 .droppedBanana{
-    background-color: yellow;
+    background-color: #fffc00;
 }
 
 .droppedPear{
-    background-color: green;
+    background-color: #36c819;
 }
 
 #tray{

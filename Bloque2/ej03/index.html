@@ -100,10 +100,16 @@
                     if($(this).data('fruit') == ui.draggable.data('fruit')){
                         if($(this).data('fruit') == "apple"){
                             $(this).addClass("droppedApple");
+                            $(this).droppable('disable');
+                            ui.draggable.remove();
                         } else if($(this).data('fruit') == "banana") {
                             $(this).addClass("droppedBanana");
+                            $(this).droppable('disable');
+                            ui.draggable.remove();
                         } else if($(this).data('fruit') == "pear") {
                             $(this).addClass("droppedPear");
+                            $(this).droppable('disable');
+                            ui.draggable.remove();
                         }
                     }
                 }
