@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>El Juego de la Muerte</title>
+    <link rel="stylesheet" href="style/index_styles.css" media="screen" title="no title">
+    <link rel="stylesheet" href="images/font-awesome/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+</head>
+<body>
+<div class="titulo">
+    <!--Poner logo-->
+    <img id="logo" src="images/logo.png" alt="logo">
+    <h1>El Juego de la Muerte</h1>
+</div>
+<hr>
+<div class="menu">
+    <div class="gamemenu">
+        <a href="">Menú del juego</a>
+    </div>
+    <nav id="menu">
+        <ul>
+            <li><a>Reiniciar partida</a></li>
+        </ul>
+    </nav>
+</div>
+<hr>
+<div id="instructions">
+    <p>
+        ¡Haz click y arrastra los objetos de la izquierda con su correspondiente silueta de la parte derecha para ganar la partida! <br>
+        Edad recomendada para jugar: 1-4 años
+    </p>
+</div>
+<div id="tablero">
+    <!--Columna origen-->
+    <div class="col" id="orig">
+        <p>Origen</p>
+        <div>
+            <img class="outline" id="fillapple" src="images/appleorig.png">
+        </div>
+        <div>
+            <img class="outline" id="fillbanana" src="images/bananaorig.png">
+        </div>
+        <div>
+            <img class="outline" id="fillpear" src="images/pearorig.png">
+        </div>
+    </div>
+    <!--Columna trayecto-->
+    <div class="col" id="tray">
+        <p>Trayecto</p>
+    </div>
+    <!--Columna destino-->
+    <div class="col" id="dest">
+        <p>Destino</p>
+        <div id="drag">
+            <img class="outline" id="olapple" src="images/apple.png">
+        </div>
+        <div>
+            <img class="outline" id="olbanana" src="images/banana.png">
+        </div>
+        <div>
+            <img class="outline" id="olpear" src="images/pear.png">
+        </div>
+    </div>
+</div>
+<hr>
+<footer class="footer">
+    <div class="social">
+        <ul class="footer-list">
+            <li class="Copyright">
+                <a><i class="fa fa-copyright" aria-hidden="true"></i></i>2016 Daniel y Nicolás </a>
+            </li>
+            <li class="social-link">
+                <a><i class="fa fa-graduation-cap" aria-hidden="true"></i>Universidad Carlos III de Madrid</a>
+            </li>
+        </ul>
+    </div>
+</footer>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+    $(function () {
+        $("#drag").draggable();
+    })
+</script>
+</body>
+</html>
