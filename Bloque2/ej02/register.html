@@ -39,10 +39,10 @@
         <div class="flex">
             <!--TODO Revisar gramatica regular-->
             <input class="entrada" id="pass1" onkeyup="passMatch()" name="password" type="password"
-                   placeholder="Contraseña" maxlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[0-9]).{,8}"
+                   placeholder="Contraseña" maxlength="8" pattern="[0-9a-z]{0,8}"
                    title="Letras minúsculas y números" style="margin-right: 1%" required>
             <input class="entrada" id="pass2" onkeyup="passMatch()" name="confirmPassword" type="password"
-                   placeholder="Confirmar contraseña" maxlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[0-9]).{,8}"
+                   placeholder="Confirmar contraseña" maxlength="8" pattern="[0-9a-z]{0,8}"
                    title="Letras minúsculas y números" required>
         </div>
         <small>La contraseña sólo puede contener letras minúsculas y números.</small>
@@ -51,9 +51,9 @@
             <input id="files" name="profilePicture" type="file" accept="image/*" formenctype="multipart/form-data"
                    formmethod="post">
             <label for="files"><img id="preview" src="images/unknown_user.jpg"></label>
-            <small>La foto de perfil podrá ser cambiada en cualquier momento desde el apartado Opciones de la cuenta.
-            </small>
         </div>
+        <small>La foto de perfil podrá ser cambiada en cualquier momento desde el apartado Opciones de la cuenta.
+        </small>
     </fieldset>
     <fieldset>
         <legend>Información de intereses y hobbies</legend>
