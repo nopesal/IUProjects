@@ -1,6 +1,7 @@
 $( init );
 
 function init() {
+    var correctFruits = 0;
     /*$('#winMessage').hide();
      $('#winMessage').css( {
      left: '580px',
@@ -21,17 +22,36 @@ function init() {
                         $(this).addClass("droppedApple");
                         $(this).droppable('disable');
                         ui.draggable.remove();
+                        correctFruits = correctFruits + 1;
+                        console.log(correctFruits);
+                        if(correctFruits == 3){
+                            winMessage();
+                        }
                     } else if($(this).data('fruit') == "banana") {
                         $(this).addClass("droppedBanana");
                         $(this).droppable('disable');
                         ui.draggable.remove();
+                        correctFruits = correctFruits + 1;
+                        console.log(correctFruits);
+                        if(correctFruits == 3){
+                            winMessage();
+                        }
                     } else if($(this).data('fruit') == "pear") {
                         $(this).addClass("droppedPear");
                         $(this).droppable('disable');
                         ui.draggable.remove();
+                        correctFruits = correctFruits + 1;
+                        console.log(correctFruits);
+                        if(correctFruits == 3){
+                            winMessage();
+                        }
                     }
                 }
             }
         });
     } );
+
+    function winMessage() {
+        alert("¡HAS GANADO EL JUEGO DE LA MUERTE!");
+    }
 }
