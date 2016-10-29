@@ -2,11 +2,19 @@ body{
     height: 100%;
 }
 
+.draggable{
+    width: 60%;
+    margin: 21%;
+}
+
+.droppable{
+    width: 60%;
+    margin: 21%;
+}
 
 .outline{
     height: 150px;
-    width: 60%;
-    margin: 21%
+    width: 100%;
 }
 
 #orig{
@@ -16,12 +24,23 @@ body{
 #dest{
     width: 25%;
 }
+.droppedApple{
+    background-color: red;
+}
+
+.droppedBanana{
+    background-color: yellow;
+}
+
+.droppedPear{
+    background-color: green;
+}
 
 #tray{
     width: 40%;
 }
 .col{
-    background-color: #ffe66d;
+    background-color: white;
     display: inline-block;
     text-align: center;
     height: 100%;

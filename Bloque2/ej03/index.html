@@ -22,7 +22,7 @@
     </div>
     <nav id="menu">
         <ul>
-            <li><a>Reiniciar partida</a></li>
+            <li><a onclick="init()">Reiniciar partida</a></li>
         </ul>
     </nav>
 </div>
@@ -37,13 +37,13 @@
     <!--Columna origen-->
     <div class="col" id="orig">
         <p>Origen</p>
-        <div class="drag">
-            <img class="outline" id="fillapple" src="images/appleorig.png">
+        <div class="draggable" data-fruit="apple">
+            <img class="outline" id="fillapple"  src="images/appleorig.png">
         </div>
-        <div class="drag">
+        <div class="draggable" data-fruit="banana">
             <img class="outline" id="fillbanana" src="images/bananaorig.png">
         </div>
-        <div class="drag">
+        <div class="draggable" data-fruit="pear">
             <img class="outline" id="fillpear" src="images/pearorig.png">
         </div>
     </div>
@@ -54,13 +54,13 @@
     <!--Columna destino-->
     <div class="col" id="dest">
         <p>Destino</p>
-        <div>
+        <div class="droppable" data-fruit="apple">
             <img class="outline" id="olapple" src="images/apple.png">
         </div>
-        <div>
+        <div class="droppable" data-fruit="banana">
             <img class="outline" id="olbanana" src="images/banana.png">
         </div>
-        <div>
+        <div class="droppable" data-fruit="pear">
             <img class="outline" id="olpear" src="images/pear.png">
         </div>
     </div>
@@ -82,7 +82,36 @@
     $( init );
 
     function init() {
-        $('.drag').draggable();
+        $('#winMessage').hide();
+        $('#winMessage').css( {
+            left: '580px',
+            top: '250px',
+            width: 0,
+            height: 0
+        } );
+
+        $( function() {
+            $( ".draggable" ).draggable({
+                containment: document.getElementById("tablero"),
+                cursor: 'move'
+            });
+            $( ".droppable" ).droppable({
+                drop: function (event, ui) {
+                    if($(this).data('fruit') == ui.draggable.data('fruit')){
+                        if($(this).data('fruit') == "apple"){
+                            $(this).addClass("droppedApple");
+                        } else if($(this).data('fruit') == "banana") {
+                            $(this).addClass("droppedBanana");
+                        } else if($(this).data('fruit') == "pear") {
+                            $(this).addClass("droppedPear");
+                        }
+                    }
+                }
+            });
+        } );
+    }
+
+    function handleFruitDrop(event, ui){
     }
 
 </script>
