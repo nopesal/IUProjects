@@ -6,8 +6,8 @@
     <link rel="stylesheet" href="style/index_styles.css" media="screen" title="no title">
     <link rel="stylesheet" href="images/font-awesome/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script type="text/javascript" src="http://gc.kis.scr.kaspersky-labs.com/E928D2A7-6C5C-3248-B9E4-F948E196AEE0/main.js" charset="UTF-8"></script><script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
 </head>
 <body>
 <div class="titulo">
@@ -37,13 +37,13 @@
     <!--Columna origen-->
     <div class="col" id="orig">
         <p>Origen</p>
-        <div>
+        <div class="drag">
             <img class="outline" id="fillapple" src="images/appleorig.png">
         </div>
-        <div>
+        <div class="drag">
             <img class="outline" id="fillbanana" src="images/bananaorig.png">
         </div>
-        <div>
+        <div class="drag">
             <img class="outline" id="fillpear" src="images/pearorig.png">
         </div>
     </div>
@@ -54,7 +54,7 @@
     <!--Columna destino-->
     <div class="col" id="dest">
         <p>Destino</p>
-        <div id="drag">
+        <div>
             <img class="outline" id="olapple" src="images/apple.png">
         </div>
         <div>
@@ -78,12 +78,13 @@
         </ul>
     </div>
 </footer>
-<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<script>
-    $(function () {
-        $("#drag").draggable();
-    })
+<script type="text/javascript">
+    $( init );
+
+    function init() {
+        $('.drag').draggable();
+    }
+
 </script>
 </body>
 </html>

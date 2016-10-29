@@ -21,11 +21,12 @@ body{
     width: 40%;
 }
 .col{
-    background-color: #61d7e1;
+    background-color: #ffe66d;
     display: inline-block;
     text-align: center;
     height: 100%;
     margin-right: 0.25%;
+    border: solid #ff6b6b;
 }
 
 #tablero{
