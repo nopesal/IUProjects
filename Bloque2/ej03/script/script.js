@@ -70,6 +70,6 @@ function init() {
     });
 
     function winMessage() {
-        alert("¡HAS GANADO EL JUEGO DE LA MUERTE!");
+        $("#won").css("display", "inline");
     }
 }

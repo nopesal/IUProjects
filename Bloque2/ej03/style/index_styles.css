@@ -7,6 +7,16 @@
     padding: 12%;
 }
 
+#won {
+    display: none;
+    padding: 2%;
+    position: relative;
+    top: 600px;
+    left: 235px;
+    background-color: #cfebee;
+    font-weight: bold;
+    border-radius: 10px;
+}
 #error {
     display: none;
     padding: 2%;
