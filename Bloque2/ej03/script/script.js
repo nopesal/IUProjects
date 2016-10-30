@@ -59,12 +59,17 @@ function init() {
                                 winMessage();
                             }
                         }
+                    } else {
+                        $("#error").css("display", "inline");
+                        setTimeout(function () {
+                            $("#error").fadeOut('fast');
+                        }, 1000);
                     }
                 }
             });
     });
 
     function winMessage() {
-        alert("¡HAS GANADO EL JUEGO DE LA MUERTE!").delay(10000);
+        alert("¡HAS GANADO EL JUEGO DE LA MUERTE!");
     }
 }

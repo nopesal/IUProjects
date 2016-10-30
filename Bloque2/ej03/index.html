@@ -10,6 +10,9 @@
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
 </head>
 <body>
+<div id="error">
+    ¡Esa figura no va ahí!
+</div>
 <div class="titulo">
     <img id="logo" src="images/Bat-icon.png" alt="logo">
     <h1>El Juego de la Muerte</h1>
@@ -17,8 +20,8 @@
 <hr>
 <nav id="menu">
     <ul>
-        <li><a href="#">Menú del juego</a></li>
-        <li><a href="">Reiniciar partida</a></li>
+        <li style="border-top-left-radius: 10px; border-bottom-left-radius: 10px;"><a href="#">Menú del juego</a></li>
+        <li style="border-top-right-radius: 10px; border-bottom-right-radius: 10px;"><a href="">Reiniciar partida</a></li>
     </ul>
 </nav>
 <hr>
@@ -33,31 +36,31 @@
     <div class="column" id="origen">
         <p>Origen</p>
         <div class="draggable" data-halloween="cat">
-            <img id="fillcat" src="images/Cat-icon.png">
+            <img id="origin-cat" src="images/Cat-icon.png">
         </div>
         <div class="draggable" data-halloween="ghost">
-            <img id="fillghost" src="images/Ghost-icon.png">
+            <img id="origin-ghost" src="images/Ghost-icon.png">
         </div>
         <div class="draggable" data-halloween="pumpkin">
-            <img id="fillpumpkin" src="images/Pumpkin-icon.png">
+            <img id="origin-pumpkin" src="images/Pumpkin-icon.png">
         </div>
         <div class="draggable" data-halloween="skeleton">
-            <img id="fillskeleton" src="images/Skeleton-icon.png">
+            <img id="origin-skeleton" src="images/Skeleton-icon.png">
         </div>
     </div>
     <div class="column" id="destino">
         <p>Destino</p>
         <div class="droppable" data-halloween="cat">
-            <img id="olcat" src="images/Cat-icon-transparent.png">
+            <img id="destination-cat" src="images/Cat-icon-transparent.png">
         </div>
         <div class="droppable" data-halloween="ghost">
-            <img id="olghost" src="images/Ghost-icon-transparent.png">
+            <img id="destination-ghost" src="images/Ghost-icon-transparent.png">
         </div>
         <div class="droppable" data-halloween="pumpkin">
-            <img id="olpumpkin" src="images/Pumpkin-icon-transparent.png">
+            <img id="destination-pumpkin" src="images/Pumpkin-icon-transparent.png">
         </div>
         <div class="droppable" data-halloween="skeleton">
-            <img id="olskeleton" src="images/Skeleton-icon-transparent.png">
+            <img id="destination-skeleton" src="images/Skeleton-icon-transparent.png">
         </div>
     </div>
 </div>
