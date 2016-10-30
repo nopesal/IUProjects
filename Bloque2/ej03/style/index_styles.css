@@ -1,52 +1,61 @@
 .draggable {
-    width: 60%;
-    margin: 21%;
+    padding: 12%;
     filter: contrast(0);
 }
 
 .droppable {
-    width: 60%;
-    margin: 21%;
+    padding: 12%;
 }
 
-.outline {
-    height: 100%;
-    width: 100%;
+img {
+    height: 120px;
+    width: 120px;
 }
 
-#orig {
+#origen {
     width: 25%;
+    margin-right: 20%;
 }
 
-#dest {
+#destino {
     width: 25%;
+    margin-left: 20%;
 }
 
 .droppedCat {
     content: url("../images/Cat-icon-solid.png");
+    height: 120px;
+    width: 120px;
+    margin: auto;
+
 }
 
 .droppedGhost {
     content: url("../images/Ghost-icon-solid.png");
+    height: 120px;
+    width: 120px;
+    margin: auto;
 }
 
 .droppedPumpkin {
     content: url("../images/Pumpkin-icon-solid.png");
+    height: 120px;
+    width: 120px;
+    margin: auto;
 }
 
 .droppedSkeleton {
     content: url("../images/Skeleton-icon-solid.png");
-}
-
-#tray {
-    width: 40%;
+    height: 120px;
+    width: 120px;
+    margin: auto;
 }
 
 .column {
     background-color: rgba(81, 194, 192, 0.7);
     display: inline-block;
     text-align: center;
-    height: 100%;
+    height: 800px;
     margin-right: 0.25%;
     border: solid #44a39d;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -54,8 +63,8 @@
 
 #tablero {
     width: 100%;
-    display: table;
-    height: 900px;
+    display: flex;
+    height: 800px;
 }
 
 body {
@@ -134,11 +143,6 @@ nav li:hover {
 nav a:hover {
     color: white;
     font-weight: bold;
-}
-
-img {
-    display: table-row;
-    height: 0;
 }
 
 .footer {

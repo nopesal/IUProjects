@@ -68,7 +68,3 @@ function init() {
         alert("¡HAS GANADO EL JUEGO DE LA MUERTE!").delay(10000);
     }
 }
-
-function reset() {
-
-}
