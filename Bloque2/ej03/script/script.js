@@ -71,5 +71,9 @@ function init() {
 
     function winMessage() {
         $("#won").css("display", "inline");
+        $(".droppedCat").css("content", "url(../ej03/images/Cat-icon.png)");
+        $(".droppedGhost").css("content", "url(../ej03/images/Ghost-icon.png)");
+        $(".droppedPumpkin").css("content", "url(../ej03/images/Pumpkin-icon.png)");
+        $(".droppedSkeleton").css("content", "url(../ej03/images/Skeleton-icon.png)");
     }
 }
