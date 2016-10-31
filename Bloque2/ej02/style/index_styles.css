@@ -68,7 +68,7 @@ h1 {
 .user {
     float: left;
     width: 20%;
-    display: flex;
+    display: none;
 }
 
 #user-logo {
@@ -93,7 +93,7 @@ h1 {
 }
 
 nav {
-    float: right;
+    float: left;
     width: 30%;
     margin-top: 10px; /*Esto permite centrar el menú en el div padre verticalmente*/
 }

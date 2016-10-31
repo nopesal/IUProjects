@@ -1,5 +1,7 @@
 function logIn(username, password) {
     if (username == readCookie("username") && password == readCookie("password")) {
+        document.getElementsByTagName("nav")[0].style.cssFloat = "right";
+        document.getElementsByClassName("user")[0].style.display = "flex";
         document.getElementById("user-logo").src = "images/woman.png";
         document.getElementById('user-name').innerHTML = "<a id='user-name'>" + username + "</a>";
 
@@ -11,9 +13,9 @@ function logIn(username, password) {
             "<li><a href='#'>Account Settings</a></li>" +
             "</ul>";
         menu.firstElementChild.childNodes[0].style.width = "25%";
-        menu.firstElementChild.childNodes[1].style.width = "25%";
-        menu.firstElementChild.childNodes[2].style.width = "25%";
-        menu.firstElementChild.childNodes[3].style.width = "25%";
+        menu.firstElementChild.childNodes[1].style.width = "20%";
+        menu.firstElementChild.childNodes[2].style.width = "20%";
+        menu.firstElementChild.childNodes[3].style.width = "35%";
         menu.style.width = "60%";
     } else {
         document.cookie = "username=" + username;
