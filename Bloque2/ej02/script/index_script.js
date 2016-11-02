@@ -21,7 +21,7 @@ function logIn(username, password) {
         document.cookie = "username=" + username;
         document.cookie = "password=" + password;
     }
-    document.getElementById('login').style.display='none';
+    document.getElementById('login').style.display = 'none';
 }
 
 function readCookie(search) {
@@ -43,9 +43,9 @@ window.onclick = function (event) {
     }
 };
 
-var likes = document.getElementsByClassName('fa-heart');
-for (var i = 0; i < likes.length; i++) {
-    likes[i].addEventListener('click', changeLikeButtonColor, false);
+var likeButtons = document.getElementsByClassName('fa-heart');
+for (var i = 0; i < likeButtons.length; i++) {
+    likeButtons[i].addEventListener('click', changeLikeButtonColor, false);
 }
 function changeLikeButtonColor() {
     if (this.style.color == 'red') {
@@ -55,18 +55,18 @@ function changeLikeButtonColor() {
     }
 }
 
-var shares = document.getElementsByClassName('fa-share-alt');
-for (i = 0; i < shares.length; i++) {
-    shares[i].addEventListener('click', shareAlert, false);
+var shareButtons = document.getElementsByClassName('fa-share-alt');
+for (i = 0; i < shareButtons.length; i++) {
+    shareButtons[i].addEventListener('click', shareAlert, false);
 }
 
 function shareAlert() {
     alert('¡Ya se ha compartido la imagen!')
 }
 
-var comments = document.getElementsByClassName('fa-comment');
-for (i = 0; i < comments.length; i++) {
-    comments[i].addEventListener('click', commentOn, false);
+var commentButtons = document.getElementsByClassName('fa-comment');
+for (i = 0; i < commentButtons.length; i++) {
+    commentButtons[i].addEventListener('click', commentOn, false);
 }
 
 function commentOn() {
@@ -76,9 +76,9 @@ function commentOn() {
     textarea.focus();
 }
 
-var paperplanes = document.getElementsByClassName('fa-paper-plane');
-for (i = 0; i < paperplanes.length; i++) {
-    paperplanes[i].addEventListener('click', commentOff, false);
+var paperplaneButtons = document.getElementsByClassName('fa-paper-plane');
+for (i = 0; i < paperplaneButtons.length; i++) {
+    paperplaneButtons[i].addEventListener('click', commentOff, false);
 }
 
 function commentOff() {

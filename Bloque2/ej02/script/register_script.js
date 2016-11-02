@@ -1,4 +1,3 @@
-//TODO Ponerse de acuerdo con comillas dobles o simples
 function sendMail(email, nombre, apellidos, usuario, password) {
     window.open("mailto:" + email + "?" +
         "subject=Registro completado"
@@ -33,42 +32,42 @@ function getDatosAficionado() {
         var estudio = aficionado.children[0].value;
         var direccion = aficionado.children[1].value;
         var telefono = aficionado.children[2].value;
-        return "Estudio: " + estudio + "\n" +
-            "Dirección del estudio: " + direccion + "\n" +
+        return "Estudio: " + estudio + "%0A" +
+            "Dirección del estudio: " + direccion + "%0A" +
             "Teléfono: " + telefono;
     } else {
         return "";
     }
 }
 
-var validReg = true;
 function validateAll() {
-    var elementoNombre = document.getElementById('nombre');
+    var validReg = true;
+    var elementoNombre = document.getElementById("nombre");
     if (elementoNombre.value == "") {
         elementoNombre.style.backgroundColor = "#ff6666";
         validReg = false;
     }
 
-    var elementoApellidos = document.getElementById('apellido');
+    var elementoApellidos = document.getElementById("apellido");
     if (elementoApellidos.value == "") {
         elementoApellidos.style.backgroundColor = "#ff6666";
         validReg = false;
     }
-    var elementoEmail = document.getElementById('mail1');
+    var elementoEmail = document.getElementById("mail1");
     if (elementoEmail.value == "" || mailMatch() == false) {
         elementoEmail.style.backgroundColor = "#ff6666";
-        document.getElementById('mail2').style.backgroundColor = "#ff6666";
+        document.getElementById("mail2").style.backgroundColor = "#ff6666";
         validReg = false;
     }
-    var elementoUsuario = document.getElementById('username');
+    var elementoUsuario = document.getElementById("username");
     if (elementoUsuario.value == "") {
         elementoUsuario.style.backgroundColor = "#ff6666";
         validReg = false;
     }
-    var elementoPassword = document.getElementById('pass1');
+    var elementoPassword = document.getElementById("pass1");
     if (elementoPassword.value == "" || passMatch() == false) {
         elementoPassword.style.backgroundColor = "#ff6666";
-        document.getElementById('pass2').style.backgroundColor = "#ff6666";
+        document.getElementById("pass2").style.backgroundColor = "#ff6666";
         validReg = false;
     }
     if (validReg == true) {
@@ -83,9 +82,9 @@ function validateAll() {
     return validReg;
 }
 
-var radios = document.getElementsByName('fotografia');
+var radios = document.getElementsByName("fotografia");
 for (var i = 0; i < radios.length; i++) {
-    radios[i].addEventListener('click', toggleAficionado, false);
+    radios[i].addEventListener("click", toggleAficionado, false);
 }
 
 function toggleAficionado() {
@@ -103,7 +102,7 @@ function toggleAficionado() {
 }
 
 function passMatch() {
-    var password1 = document.getElementById('pass1').value;
+    var password1 = document.getElementById("pass1").value;
     var password2 = document.getElementById("pass2");
     var passValid = true;
     if (password1 == "" && password2.value == "") {

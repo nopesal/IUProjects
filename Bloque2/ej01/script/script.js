@@ -36,7 +36,6 @@ for (i = 0; i < paperplanes.length; i++) {
     paperplanes[i].addEventListener('click', commentOff, false);
 }
 
-//    TODO Falta hacer el signo menos para volver a contraer el texto?
 function commentOff() {
     var comment = this.parentNode.parentNode;
     var textarea = comment.firstElementChild;
